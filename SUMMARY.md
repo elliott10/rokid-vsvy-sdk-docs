@@ -17,7 +17,7 @@
     * 示例源码 
 * Rokid 语音识别以及合成服务
      * [概述](speechTTS/sketch.md)
-     * [获取秘钥]() 
+     * [获取秘钥](common/key_secret.md) 
      * [集成](speechTTS/init.md)
      * 类参考
      * 示例源码
