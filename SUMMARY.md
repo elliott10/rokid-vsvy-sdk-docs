@@ -19,5 +19,9 @@
      * [概述](speechTTS/sketch.md)
      * [获取秘钥](common/key_secret.md) 
      * [集成](speechTTS/init.md)
+        * [集成前准备](speechTTS/init.md)
+        * [语音识别服务集成](speechTTS/init_speech.md)
+        * [语音合成服务集成](speechTTS/init_tts.md)
+
      * 类参考
      * 示例源码
