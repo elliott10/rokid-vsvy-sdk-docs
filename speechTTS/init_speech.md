@@ -1,8 +1,8 @@
 ###  语音识别服务集成
 
-用户需要在使用语音识别服务之前，调用上下代码来进行初始化
+用户需要在使用语音识别服务之前，调用以下代码来进行初始化
 
-首先实例化语音识别服务对象
+首先创建实例
 
 ```java
         Speech speech = new Speech();
@@ -20,13 +20,13 @@
         prepareOptions.device_type_id = "";
         //secret
         prepareOptions.secret = "";
-        //device_id
+        // 设备名称，类似昵称，可自由选择，不影响认证结果
         prepareOptions.device_id = "";
         
         speech.prepare(prepareOptions);
 
 ```
-
+在prepare后任意时刻，都可以调用config修改配置
 ```java
         // 修改音频编码格式及语言，其它选项不变
         SpeechOptions opts = new SpeechOptions();
@@ -35,9 +35,23 @@
         speech.config(opts);
 ```
 
-以上为初始化步骤，如需验证请参考下述代码
+以上为初始化步骤，初始化完成后，开发者可模拟发送语音识别请求来验证是否集成成功
 
 ```java
+// 语音Speech请求
+// 不设置VoiceOptions，全部使用默认值。
+int id = speech.startVoice(new SpeechCallback() {
+                ......
+            });
+speech.putVoice(id, your_voice_data);
+speech.putVoice(id, more_voice_data);
+speech.putVoice(id, ...);
+...
+speech.endVoice(id);
+```
+
+```java
+// 文字Speech请求
 speech.putText("你好若琪", new SpeechCallback() {
             @Override
             public void onStart(int i) {
