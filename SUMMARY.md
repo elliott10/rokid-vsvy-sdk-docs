@@ -22,5 +22,5 @@
         * [集成前准备](speechTTS/init_prepare.md)
         * [语音识别服务集成](speechTTS/init_speech.md)
         * [语音合成服务集成](speechTTS/init_tts.md)
-     * 类参考
+     * API参考
      * [示例源码](https://github.com/Rokid/RokidSpeechTTSDemo)
