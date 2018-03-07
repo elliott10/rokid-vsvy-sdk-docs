@@ -27,3 +27,4 @@
         * [Speech](/speechTTS/api_speech.md)
      * [示例源码](https://github.com/Rokid/RokidSpeechTTSDemo)
      * [错误码](common/err_code.md)
+     * [Json格式配置字串](common/api_json.md)

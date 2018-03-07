@@ -18,7 +18,7 @@ void|prepare(InputStream is)|使用流初始化|
 
 字段| 类型 |必须？| 描述
 ---|---|---|---|---
-options | [PrepareOptions](#po) | 可选 |选项，详见[PrepareOptions](#po)数据结构
+options | PrepareOptions | 可选 |选项，详见PrepareOptions数据结构
 configFile | String | 可选 |配置文件路径名。文件内容详见[json格式配置字串](#jsonconf)
  is | InputStream | 可选 |数据流，流内容详见[json格式配置字串](#jsonconf)
  
@@ -155,13 +155,13 @@ callback | TtsCallback | 必须 | 回调接口
 
 返回类型|方法|备注|
 ---|---|---|
-void|config([TtsOptions](#to) options)| TTS的配置选项，详见[TtsOptions](#to)数据结构
+void|config(TtsOptions options)| TTS的配置选项，详见TtsOptions数据结构
 
 **参数说明**
 
 字段| 类型 |必须？| 描述
 ---|---|---|---|---
-options | [TtsOptions](#to) | 是 |TTS的配置选项，详见[TtsOptions](#to)数据结构
+options | TtsOptions | 是 |TTS的配置选项，详见TtsOptions数据结构
 
 **示例代码**
 
@@ -172,22 +172,40 @@ options | [TtsOptions](#to) | 是 |TTS的配置选项，详见[TtsOptions](#to)�
 ```
 
 ## TtsOptions
-使用set\_xxx接口设定选项值，未设定的值将不会更改旧有的设定值
-   
-   ~ | 名称 | 类型 | 描述
-   ---|---|---|---
-   接口 | set\_codec | | 设定编码格式，默认PCM
-   参数 | codec | String | 编码格式，限定值"pcm", "opu2", "mp3"
-   
-   ~ | 名称 | 类型 | 描述
-   ---|---|---|---
-   接口 | set\_declaimer | | 设定语音朗读者，默认"zh"
-   参数 | declaimer | String | 限定值"zh"
-   
-   ~ | 名称 | 类型 | 描述
-   ---|---|---|---
-   接口 | set\_samplerate | | 设定语音采样率，默认24000
-   参数 | samplerate | int |
+
+**set\_codec**
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|---
+codec | String | 是 |编码格式，限定值```pcm```、```opu2```、```mp3```
+
+**set\_declaimer**
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|---
+declaimer | String | 是 |设定语音朗读者,限定值```zh```
+
+**set\_samplerate**
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|---
+samplerate | int | 是 |设定语音采样率，默认```24000```
+
+**示例代码**
+
+```
+	TtsOptions options = new TtsOptions();
+	topts.set_codec("opu2");
+	topts.set_ declaimer("zh");
+	topts.set_samplerate(24000);
+	tts.config(options);
+```
 
 
 ## 回调接口
@@ -242,4 +260,4 @@ data | byte[] | 语音数据，根据TtsOptions决定编码格式
 字段| 类型 | 描述
 ---|---|---|---|---
 id | int |TTS Speak返回的id
- | int | 错误码
+i1 | int | 错误码
