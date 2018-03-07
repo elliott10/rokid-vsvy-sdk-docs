@@ -207,7 +207,7 @@ trigger\_start | int | 语音数据中激活词的开始位置
 trigger\_length | int | 激活词语音数据长度
 skill\_options | String |
 
-
+### PrepareOptions
 名称 | 类型 | 描述
 ---|---|---
 host | String | tts服务host
