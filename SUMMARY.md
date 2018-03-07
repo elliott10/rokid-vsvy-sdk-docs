@@ -23,4 +23,7 @@
         * [语音识别服务集成](speechTTS/init_speech.md)
         * [语音合成服务集成](speechTTS/init_tts.md)
      * [API参考](speechTTS/api.md)
+        * [TTS](/speechTTS/api_tts.md)
+        * [Speech](/speechTTS/api_speech.md)
      * [示例源码](https://github.com/Rokid/RokidSpeechTTSDemo)
+     * [错误码](common/err_code.md)
