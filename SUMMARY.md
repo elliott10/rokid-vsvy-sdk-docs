@@ -18,10 +18,10 @@
 * Rokid 语音识别以及合成服务
      * [概述](speechTTS/sketch.md)
      * [获取秘钥](common/key_secret.md) 
-     * [集成](speechTTS/init.md)
+     * [快速集成](speechTTS/init.md)
         * [集成前准备](speechTTS/init_prepare.md)
-        * [语音识别服务集成](speechTTS/init_speech.md)
-        * [语音合成服务集成](speechTTS/init_tts.md)
+        * [语音识别服务快速集成](speechTTS/init_speech.md)
+        * [语音合成服务快速集成](speechTTS/init_tts.md)
      * [API参考](speechTTS/api.md)
         * [TTS](/speechTTS/api_tts.md)
         * [Speech](/speechTTS/api_speech.md)
