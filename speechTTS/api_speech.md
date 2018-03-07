@@ -15,7 +15,7 @@ void|prepare(PrepareOptions options)|使用PrepareOption 初始化|
 **参数说明**
 
 字段| 类型 |必须？| 描述
----|---|---|---|---
+---|---|---|---|
 options | PrepareOptions | 可选 |选项，详见PrepareOptions数据结构
 
 **示例代码**
@@ -159,41 +159,58 @@ void | onComplete(int i，String s,String s1)|speech最终结果
 void | onCancel(int i)| speech被取消
 void | onError(int id,int i1)| speech出错
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | onStart | | speech结果开始返回
-参数 | id | int | speech id
+**onStart(int id)**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | onIntermediateResult | | speech中间结果。可能回调多次
-参数 | id | int | speech id
-参数 | asr | String | 语音转文字中间结果
-参数 | extra | String | 激活结果
+**参数说明**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | onAsrComplete | | speech asr完整结果
-参数 | id | int | speech id
-参数 | asr | String | 语音转文字完整结果
+字段| 类型 | 描述
+---|---|---|---|---
+i| int  | 当前Speech 请求的id
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | onComplete | | speech最终结果
-参数 | id | int | speech id
-参数 | nlp | String | 自然语义解析结果
-参数 | action | String | rokid speech skill返回的结果
+**onIntermediateResult(int i,String s，String s1)**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | onCancel | | speech被取消
-参数 | id | int | speech id
+**参数说明**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | onError | | speech出错
-参数 | id | int | speech id
-参数 | err | int | [错误码](#errcode)
+字段| 类型 | 描述
+---|---|---|
+id | int | speech id
+s | String | 语音转文字中间结果
+s1 | String | 激活结果
+
+**onAsrComplete(int i,String s)**
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+i | int | 当前Speech 请求的id
+s | String | 语音转文字完整结果
+
+**onComplete(int i，String s,String s1)**
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+i | int |当前Speech 请求的id
+s | String | 自然语义解析结果
+s1 | String | rokid speech skill返回的结果
+
+**onCancel(int i)**
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+id | int | 当前Speech 请求的id
+**onError(int id,int i1)**
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+id | int |当前Speech 请求的id
+err | int | 错误码
 
 ## 数据结构
 
