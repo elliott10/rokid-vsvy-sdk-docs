@@ -166,9 +166,27 @@ options | TtsOptions | 是 |TTS的配置选项，详见TtsOptions数据结构
 **示例代码**
 
 ```java
+	TtsOptions options = new TtsOptions();
+    //son=me config	
+	tts.config(options);
 	
-	
-	
+```
+
+### 6.OpusPlayer接口
+
+**接口说明**
+用于帮助播放opu2格式tts音频数据的工具类
+
+**参数说明**
+字段| 类型 |必须？| 描述
+---|---|---|---|---
+data |  byte[] | 是 |音频数据
+
+**示例代码**
+
+```java
+    OpusPlayer opusPlayer = new OpusPlayer();
+    opusPlayer.play(data);
 ```
 
 ## TtsOptions
@@ -199,7 +217,7 @@ samplerate | int | 是 |设定语音采样率，默认```24000```
 
 **示例代码**
 
-```
+```java
 	TtsOptions options = new TtsOptions();
 	topts.set_codec("opu2");
 	topts.set_ declaimer("zh");
