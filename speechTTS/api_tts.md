@@ -26,6 +26,7 @@ configFile | String | 可选 |配置文件路径名。文件内容详见[json格
 
 ```java
 //使用 PrepareOption 初始化
+        TTS tts = new TTS();
 		PrepareOptions popts = new PrepareOptions();
         popts.host = "apigwws.open.rokid.com";
         popts.port = 443;
@@ -237,7 +238,7 @@ void | onText(int i,String s)| 给出当前已经转成语音的文字
 void | onVoice(int id,byte[] data)|语音数据流
 void | onCancel(int i)|语音转文字已经取消
 void | onComplete(int i)| 语音数据已经全部给出
-void | onError(int id,int i1)| 语音转文字出错
+void | onError(int id,int i1)| 文字转语音出错
 
 **onStart**
 
