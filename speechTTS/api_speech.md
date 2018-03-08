@@ -22,7 +22,7 @@ options | PrepareOptions | 可选 |选项，详见PrepareOptions数据结构
 
 ```java
 //使用 PrepareOption 初始化
-                speech = new Speech();
+                Speech speech = new Speech();
                 PrepareOptions prepareOptions = new PrepareOptions();
                 prepareOptions.host = "apigwws.open.rokid.com";
                 prepareOptions.port = 443;
@@ -129,10 +129,11 @@ void||endVoice(int id)|通知sdk语音数据发送完毕，结束speech
 **startVoice**
 
 **参数说明**
+
 字段| 类型 |必须？| 描述
 ---|---|---|---|
 cb | SpeechCallback | 是|speech回调接口对象
-options | [VoiceOptions](#vo) |否| 当前语音speech的选项，详见[VoiceOptions](#vo)。
+options | VoiceOptions |否| 当前语音speech的选项，详见VoiceOptions。
 
 **putVoice**
 
@@ -152,6 +153,7 @@ data | byte[]|是 | 语音数据
 id | int |是 |speech id
 
 **示例代码**
+
 ```java
 
 
