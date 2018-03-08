@@ -10,7 +10,7 @@ Rokid Speech 语音合成 SDK 初始化
 
 返回类型|方法|备注|
 ---|---|---|
-void|prepare(PrepareOptions options)|使用PrepareOption 初始化|
+void|prepare(PrepareOptions options)|使用PrepareOption 初始化
 
 **参数说明**
 
@@ -22,16 +22,16 @@ options | PrepareOptions | 可选 |选项，详见PrepareOptions数据结构
 
 ```java
 //使用 PrepareOption 初始化
-        Speech speech = new Speech();
-		PrepareOptions popts = new PrepareOptions();
-        popts.host = "apigwws.open.rokid.com";
-        popts.port = 443;
-        popts.branch = "/api";
-        popts.key = "";
-        popts.device_type_id = "";
-        popts.secret = "";
-        popts.device_id ="";
-        tts.prepare(popts);
+                speech = new Speech();
+                PrepareOptions prepareOptions = new PrepareOptions();
+                prepareOptions.host = "apigwws.open.rokid.com";
+                prepareOptions.port = 443;
+                prepareOptions.branch = "/api";
+                prepareOptions.key = Prepare.ROKID_KEY;
+                prepareOptions.device_type_id = Prepare.ROKID_DEVICE_TYPE_ID;
+                prepareOptions.secret = Prepare.ROKID_SECRET;
+                prepareOptions.device_id = Prepare.ROKID_DEVICE_ID;
+                speech.prepare(prepareOptions);
 ``` 
 ### 2.SDK 关闭
 
@@ -55,46 +55,150 @@ void|release()|Speech SDK关闭
 
 **接口说明**
 
-Rokid 语音识别服务允许用户直接发送
+Rokid 语音识别服务允许用户直接发送文字，并根据用户发送的文本，返回对应的数据
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | putText | | 发起文本speech
-参数 | text | String | speech文本
-参数 | cb | SpeechCallback | speech回调接口对象
-返回值 | | int | speech id
+**方法预览**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | startVoice | | 发起语音speech
-参数 | cb | SpeechCallback | speech回调接口对象
-参数 | options | [VoiceOptions](#vo) | 当前语音speech的选项，详见[VoiceOptions](#vo)。此参数可不带
-返回值 | | int | speech id
+返回类型|方法|备注|
+---|---|---|
+int|putText|发起文本识别，返回值为当前发起的语音识别请求speech id
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | putVoice | | 发送语音数据, 一次speech的语音数据可分多次发送
-参数 | id | int | speech id
-参数 | data | byte[] | 语音数据
-返回值 | 无 | |
+**参数说明**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | endVoice | | 通知sdk语音数据发送完毕，结束speech
-参数 | id | int | speech id
-返回值 | 无 | |
+返回类型|方法|备注|
+---|---|---|
+text | String | speech文本
+cb | SpeechCallback | speech回调接口对象
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | cancel | | 取消指定的speech请求
-参数 | id | int | speech id
-返回值 | 无 | |
+**示例代码**
 
-~ | 名称 | 类型 | 描述
----|---|---|---
-接口 | config | | 设置speech选项
-参数 | options | [SpeechOptions](#so) | 详见[SpeechOptions](#so)
-返回值 | 无 | |
+```java
+
+        speech.putText(s, new SpeechCallback() {
+            @Override
+            public void onStart(int i) {
+                LogUtil.d("onStart " + i);
+            }
+
+            @Override
+            public void onIntermediateResult(int i, String s, String s1) {
+                LogUtil.d("onIntermediateResult " + i + " " + s + " " + s1);
+            }
+
+            @Override
+            public void onAsrComplete(int i, String s) {
+                LogUtil.d("onAsrComplete " + i + " " + s);
+            }
+
+            @Override
+            public void onComplete(int i, final String s, final String s1) {
+                LogUtil.d("onComplete " + s + " " + s1);
+                //需要在主线程更新ui
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //自然语义解析结果
+                        tvAsrResult.setText(s);
+                        //Rokid Speech skill返回的结果
+                        tvAsrBackResult.setText(s1);
+                    }
+                });
+            }
+
+            @Override
+            public void onCancel(int i) {
+                LogUtil.d("onCancel " + i);
+            }
+
+            @Override
+            public void onError(int i, int i1) {
+                LogUtil.d("onError " + i + " " + i1);
+            }
+        });
+
+```
+
+### 4.语音识别
+
+返回类型|返回值|方法|备注|
+---|---|---|---|
+int|speech id|startVoice(SpeechCallback callback,VoiceOptions options)| 发起语音speech，返回
+void||putVoice(int id ,byte[] data)| 发送语音数据, 一次speech的语音数据可分多次发送
+void||endVoice(int id)|通知sdk语音数据发送完毕，结束speech
+
+**startVoice**
+
+**参数说明**
+字段| 类型 |必须？| 描述
+---|---|---|---|
+cb | SpeechCallback | 是|speech回调接口对象
+options | [VoiceOptions](#vo) |否| 当前语音speech的选项，详见[VoiceOptions](#vo)。
+
+**putVoice**
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|
+id | int |是 |speech id
+data | byte[]|是 | 语音数据
+
+**endVoice**
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|
+id | int |是 |speech id
+
+**示例代码**
+```java
+
+
+```
+
+### 5.设置语音识别参数
+
+**接口说明**
+
+用户可以通过这种方式来手动录音，并发送给语音分析服务器，并返回识别结果
+
+**方法预览**
+
+返回类型|方法|备注|
+---|---|---|
+void|config(SpeechOptions options)| 语音识别Speech的配置选项
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|
+config | SpeechOptions | 是 | 
+
+### 6.取消语音识别请求
+
+**接口说明**
+
+当用户调用了startVoice请求之后，如果想取消语音识别，可调用此方法，而不是endVoice方法
+
+**方法预览**
+
+返回类型|方法|备注|
+---|---|---|
+void|cancel(int id)| 取消指定的speech请求
+
+**参数说明**
+
+字段| 类型 |必须？| 描述
+---|---|---|---|
+id | int | 是 | speech id
+
+**示例代码**
+
+```java
+
+
+```
 
 ## SpeechOptions
 
