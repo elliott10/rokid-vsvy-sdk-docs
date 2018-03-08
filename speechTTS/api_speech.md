@@ -155,7 +155,39 @@ id | int |是 |speech id
 **示例代码**
 
 ```java
+int speechId = speech.startVoice(new SpeechCallback() {
+            @Override
+            public void onStart(int i) {
+                
+            }
 
+            @Override
+            public void onIntermediateResult(int i, String s, String s1) {
+
+            }
+
+            @Override
+            public void onAsrComplete(int i, String s) {
+
+            }
+
+            @Override
+            public void onComplete(int i, String s, String s1) {
+
+            }
+
+            @Override
+            public void onCancel(int i) {
+
+            }
+
+            @Override
+            public void onError(int i, int i1) {
+
+            }
+        });
+        speech.putVoice(speechId,voiceByte);
+        speech.endVoice(speechId);
 
 ```
 
@@ -198,8 +230,7 @@ id | int | 是 | speech id
 **示例代码**
 
 ```java
-
-
+speech.cancel(speechId);
 ```
 
 ## SpeechOptions
