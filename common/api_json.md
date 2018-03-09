@@ -21,14 +21,14 @@ declaimer | 语音播报员设置<br>目前只有一个播报员，默认名"zh"
 
 配置字串示例
 
-```
+```json
 {
-	'host': 'apigwws.open.rokid.com',
-	'port': 443,
-	'branch': '/api',
-	'key': '用于服务认证的key',
-	'device_type_id': '用于服务认证的device_type_id',
-	'secret': '用于服务认证的secret',
-	'device_id': '设备id 一般使用设备sn'
+	"host": "apigwws.open.rokid.com",
+	"port": 443,
+	"branch": "/api",
+	"key": "用于服务认证的key",
+	"device_type_id": "用于服务认证的device_type_id",
+	"secret": "用于服务认证的secret",
+	"device_id": "设备id 一般使用设备sn"
 }
 ```
