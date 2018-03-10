@@ -25,7 +25,7 @@ deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $RE_GH_TOKEN
-    local_dir: _book
+    local_dir: ${TRAVIS_BUILD_DIR}/book
     target_branch: gh-pages
     on:
       branch: master
