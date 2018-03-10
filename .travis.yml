@@ -26,7 +26,7 @@ deploy:
     skip_cleanup: true
     github_token: $RE_GH_TOKEN
     local-dir: _book
-    target_branch: gh-pages
+    target_branch: doc-pages
     on:
       branch: master
 
