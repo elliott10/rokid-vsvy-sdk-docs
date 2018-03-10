@@ -24,9 +24,9 @@ script:
 deploy:
   - provider: pages
     skip_cleanup: true
-    github_token: $RE_GH_TOKEN
+    github_token: $GH_TOKEN
     local-dir: _book
-    target_branch: doc-pages
+    target_branch: gh-pages
     on:
       branch: master
 
