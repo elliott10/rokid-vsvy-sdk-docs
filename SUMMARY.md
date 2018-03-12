@@ -5,14 +5,10 @@
 * 关于SDK一些你需要知道的事
     * Rokid SDK 2.0 For Android 简介
     * [专有名词解释](introduce/proper_noun.md)
-* Rokid 拾音唤醒服务
-    * 概述
-    * 集成
-        * 系统编译
-    * 开发指南
-        * 配置文件
-    * 类参考
-    * 示例源码 
+* Rokid 全链路系统集成
+    * [概述](fullLink/introduce.md)
+    * [快速集成](fullLink/init_quick.md)
+    * [API 参考](fullLink/api_voicerecognize.md)
 * Rokid 语音识别以及合成服务
      * [概述](speechTTS/introduce.md)
      * [获取秘钥](common/key_secret.md) 
