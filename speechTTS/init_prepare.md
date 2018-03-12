@@ -1,10 +1,18 @@
 # 集成前准备
 
+## 获取SDK
+
+ * 请通过 [Rokid SDK下载网站](https://developer-dev.rokid.com/tob) , 根据网站提示进行配置,生成 SDK 后下载
+
 ## 复制文件
 
-将```rokid_speech.jar```复制到 Android 工程下的 ```libs``` 文件夹中，并设置为工程的依赖库
+将```java-libraries```文件夹下的```rokid_speech.jar```复制到 Android 工程下的 ```app/libs``` 文件夹中，并设置为工程的依赖库
 
-将二进制库文件复制进工程目录下的 ```app/src/main/jniLibs``` 下
+![](../img/init_jar.png)
+
+将```shared-libraries```文件夹下的全部文件复制到 Android 工程下的```app/src/main/jniLibs``` 文件夹中
+
+![](../img/init_jnilibs.png)
 
 ## 添加权限
 

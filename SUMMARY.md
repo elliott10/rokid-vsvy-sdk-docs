@@ -7,10 +7,12 @@
     * [专有名词解释](introduce/proper_noun.md)
 * Rokid 全链路系统集成
     * [概述](fullLink/introduce.md)
+    * [SDK 目录结构](fullLink/sdk_dir.md)
     * [快速集成](fullLink/init_quick.md)
     * [API 参考](fullLink/api_voicerecognize.md)
 * Rokid 语音识别以及合成服务
      * [概述](speechTTS/introduce.md)
+     * [SDK 目录结构](speechTTS/sdk_dir.md)
      * [获取秘钥](common/key_secret.md) 
      * [快速集成](speechTTS/init.md)
         * [集成前准备](speechTTS/init_prepare.md)
