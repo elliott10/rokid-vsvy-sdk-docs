@@ -281,3 +281,18 @@ data | byte[] | 语音数据，根据TtsOptions决定编码格式
 ---|---|---|
 id | int |TTS Speak返回的id
 i1 | int | 错误码
+
+## 数据结构
+
+### PrepareOptions
+名称 | 类型 | 描述
+---|---|---
+host | String | 语音识别服务host,一般为 ```apigwws.open.rokid.com```
+port | int | 语音识别服务port ```443```
+branch | String | 语音识别服务url path ```/api```
+key | String | 语音识别服务认证key
+device\_type\_id | String | 设备类型，用于语音识别服务认证
+secret | String | 用于语音识别服务认证
+device\_id | String | 设备id，用于语音识别服务认证
+
+获取key、id等参数，请参考[获取秘钥](../common/key_secret.md)章节

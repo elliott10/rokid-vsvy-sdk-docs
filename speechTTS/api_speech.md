@@ -289,12 +289,12 @@ v | boolean | 是 |
 
 返回类型|方法|备注|
 ---|---|---|
-void | onStart(int i) | speech结果开始返回
-void | onIntermediateResult(int i,String s，String s1)| 给出当前已经转成语音的文字
-void | onAsrComplete(int i,String s)|speech asr完整结果
-void | onComplete(int i，String s,String s1)|speech最终结果
-void | onCancel(int i)| speech被取消
-void | onError(int id,int i1)| speech出错
+void | onStart(int id) | speech结果开始返回
+void | onIntermediateResult(int id,String asrResult，String extraResult)| 给出当前已经转成语音的文字
+void | onAsrComplete(int id,String asrResult)|speech asr完整结果
+void | onComplete(int id，String nlpResult,String intent)|speech最终结果
+void | onCancel(int id)| speech被取消
+void | onError(int id,int errCode)| speech出错
 
 **onStart(int id)**
 
@@ -302,52 +302,52 @@ void | onError(int id,int i1)| speech出错
 
 字段| 类型 | 描述
 ---|---|---|---|---
-i| int  | 当前Speech 请求的id
+id| int  | 当前Speech 请求的id
 
-**onIntermediateResult(int i,String s，String s1)**
+**onIntermediateResult(int id,String asrResult，String extraResult)**
 
 **参数说明**
 
 字段| 类型 | 描述
 ---|---|---|
 id | int | speech id
-s | String | 语音转文字中间结果
-s1 | String | 激活结果
+asrResult | String | 语音转文字中间结果
+extraResult | String | 激活结果
 
-**onAsrComplete(int i,String s)**
-
-**参数说明**
-
-字段| 类型 | 描述
----|---|---|
-i | int | 当前Speech 请求的id
-s | String | 语音转文字完整结果
-
-**onComplete(int i，String s,String s1)**
-
-**参数说明**
-
-字段| 类型 | 描述
----|---|---|
-i | int |当前Speech 请求的id
-s | String | 自然语义解析结果
-s1 | String | rokid speech skill返回的结果
-
-**onCancel(int i)**
+**onAsrComplete(int id,String asrResult)**
 
 **参数说明**
 
 字段| 类型 | 描述
 ---|---|---|
 id | int | 当前Speech 请求的id
-**onError(int id,int i1)**
+asrResult | String | 语音转文字完整结果
+
+**onComplete(int id，String nlpResult,String intent)**
 
 **参数说明**
 
 字段| 类型 | 描述
 ---|---|---|
 id | int |当前Speech 请求的id
-err | int | 错误码
+nlpResult | String | 自然语义解析结果
+intent | String | rokid speech skill返回的结果
+
+**onCancel(int id)**
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+id | int | 当前Speech 请求的id
+**onError(int id,int errCode)**
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+id | int |当前Speech 请求的id
+errCode | int | 错误码
 
 ## 数据结构
 
@@ -364,12 +364,14 @@ skill\_options | String |
 ### PrepareOptions
 名称 | 类型 | 描述
 ---|---|---
-host | String | tts服务host
-port | int | tts服务port
-branch | String | tts服务url path
-key | String | tts服务认证key
-device\_type\_id | String | 设备类型，用于tts服务认证
-secret | String | 用于tts服务认证
-device\_id | String | 设备id，用于tts服务认证
+host | String | 语音识别服务host,一般为 ```apigwws.open.rokid.com```
+port | int | 语音识别服务port ```443```
+branch | String | 语音识别服务url path ```/api```
+key | String | 语音识别服务认证key
+device\_type\_id | String | 设备类型，用于语音识别服务认证
+secret | String | 用于语音识别服务认证
+device\_id | String | 设备id，用于语音识别服务认证
+
+获取key、id等参数，请参考[获取秘钥](../common/key_secret.md)章节
 
 
