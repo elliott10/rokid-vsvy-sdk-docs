@@ -10,7 +10,7 @@
 
 ![](../img/init_jar.png)
 
-将```shared-libraries```文件夹下的全部文件复制到 Android 工程下的```app/src/main/jniLibs``` 文件夹中
+将```shared-libraries```文件夹下的全部文件包含文件夹复制到 Android 工程下的```app/src/main/jniLibs``` 文件夹中
 
 ![](../img/init_jnilibs.png)
 
