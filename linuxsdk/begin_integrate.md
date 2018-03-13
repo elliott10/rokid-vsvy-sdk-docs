@@ -19,6 +19,11 @@ $ cd speech_sdk
 
 非交叉编译适用于 ubuntu 系统或在树莓派上安装 ubuntu 系统的环境。方法如下：
 
+* 安装 cmake
+  ```
+  $ sudo apt-get install cmake
+  ```
+
 * 安装 openssl 
 
   编译 uWS 模块时要依赖 openssl 库，所以要先安装 openssl 库

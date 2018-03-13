@@ -149,7 +149,7 @@ speech->put_voice(id, ...);
 
 ## 数据结构
 
-Speech.VoiceOptions
+**Speech.VoiceOptions**
 
 | 名称           | 类型   | 描述                      |
 | -------------- | ------ | ------------------------- |
@@ -162,7 +162,7 @@ Speech.VoiceOptions
 | device_id      | string | 设备id，用于tts服务认证   |
 
 
-VoiceOptions
+**VoiceOptions**
 
 | 名称            |  类型  | 描述                       |
 | --------------- | :----: | -------------------------- |
@@ -174,7 +174,7 @@ VoiceOptions
 
 
 
-SpeechResult
+**SpeechResult**
 | 名称   | 类型                  | 描述                                                         |
 | ------ | --------------------- | ------------------------------------------------------------ |
 | id     | int32                 | speech请求id                                                 |
@@ -186,7 +186,7 @@ SpeechResult
 | extra  | string                | 激活结果                                                     |
 
 
-SpeechOptions
+**SpeechOptions**
 使用set\_xxx接口设定选项值，未设定的值将不会更改旧有的设定值
 
 |~ | 名称 | 类型 | 描述|
@@ -214,5 +214,3 @@ SpeechOptions
 |---|---|---|---|
 |接口 | set\_no\_intermediate\_asr | | 设定是否需要服务端给出中间asr结果|
 |参数 | v | boolean |
-A
-
