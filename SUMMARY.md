@@ -22,7 +22,8 @@
      * [API参考](speechTTS/api.md)
         * [语音识别服务](/speechTTS/api_speech.md)
         * [语音合成服务](/speechTTS/api_tts.md)
-* Linux基础架构
      * [示例源码](https://github.com/Rokid/RokidSpeechTTSDemo)
      * [错误码](common/err_code.md)
      * [Json格式配置字串](common/api_json.md)
+* Linux基础架构
+     

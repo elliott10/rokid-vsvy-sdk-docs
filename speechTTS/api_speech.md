@@ -324,6 +324,10 @@ extraResult | String | 激活结果
 
 **onAsrComplete(int id,String asrResult)**
 
+**方法说明**
+
+语音识别技术后返回完整的语音识别结果
+
 **参数说明**
 
 字段| 类型 | 描述
@@ -332,6 +336,10 @@ id | int | 当前Speech 请求的id
 asrResult | String | 语音转文字完整结果
 
 **onComplete(int id，String nlpResult,String intent)**
+
+**方法说明**
+
+根据识别结果返回Rokid 云平台上的skill信息
 
 **参数说明**
 
@@ -343,12 +351,20 @@ intent | String | rokid speech skill返回的结果
 
 **onCancel(int id)**
 
+**方法说明**
+
+语音是被取消
+
 **参数说明**
 
 字段| 类型 | 描述
 ---|---|---|
 id | int | 当前Speech 请求的id
 **onError(int id,int errCode)**
+
+**方法说明**
+
+语音识别发生错误，详情请看[错误码](../common/err_code.md)
 
 **参数说明**
 
