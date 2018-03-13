@@ -142,7 +142,7 @@ options | VoiceOptions |否| 当前语音speech的选项，详见VoiceOptions。
 字段| 类型 |必须？| 描述
 ---|---|---|---|
 id | int |是 |speech id
-data | byte[]|是 | 语音数据
+data | byte[]|是 | 语音数据,**输入的音频流必须为16bit 16kHz采样，单声道**
 
 **endVoice**
 
@@ -235,6 +235,8 @@ speech.cancel(speechId);
 
 ## SpeechOptions
 
+使用SpeechOptions设置语音识别相关参数
+
 返回类型|方法|备注|
 ---|---|---|
 void | set\_lang(String lang) | 设定文字语言。设定speech putText接口要发送的文本的语言; 影响语音识别结果'asr'的文本语言
@@ -249,7 +251,7 @@ void | set\_no\_intermediate\_asr(boolean v)| 设定是否需要服务端给出�
 
 字段| 类型 |必须？| 描述
 ---|---|---|---|
-lang | String | 是 |限定值```zh```、```en```
+lang | String | 是 |限定值```zh```
 
 **set\_codec**
 
@@ -257,7 +259,7 @@ lang | String | 是 |限定值```zh```、```en```
 
 字段| 类型 |必须？| 描述
 ---|---|---|---|
-codec | String | 是 |编码格式，限定值```pcm```、```opu```
+codec | String | 是 |编码格式，限定值```pcm```、```opu``` 
 
 **set\_vad\_mode**
 
@@ -376,16 +378,6 @@ id | int |当前Speech 请求的id
 errCode | int | 错误码
 
 ## 数据结构
-
-### Speech.VoiceOptions
-
-名称 | 类型 | 描述
----|---|---
-stack | String |
-voice\_trigger | String | 激活词
-trigger\_start | int | 语音数据中激活词的开始位置
-trigger\_length | int | 激活词语音数据长度
-skill\_options | String |
 
 ### PrepareOptions
 名称 | 类型 | 描述

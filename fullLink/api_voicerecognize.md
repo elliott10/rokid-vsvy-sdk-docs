@@ -1,6 +1,6 @@
 # API参考
 
-rkvoicerec.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两个比较重要的类。
+VoiceRecognize.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两个比较重要的类。
 使用```VoiceRecognizeBuilder```设置Rokid账号信息就能得到一个```VoiceRecognize```对象，账号获取方式见[创建设备流程](../rookie-guide/create-device.md)。
 下面详细介绍```VoiceRecognize```内部类和接口定义。
 
@@ -20,7 +20,7 @@ int|成功返回0；失败返回-1|updateStack(String currAppId,String prevAppId
 
 **control(Action action)**
 
-**方式说明**
+**方法说明**
 
 控制语音激活
 
@@ -38,7 +38,7 @@ int|成功返回0；失败返回-1
 
 **addVtWord(VtWord vtWord)**
 
-**方式说明**
+**方法说明**
 
 添加激活词
 
@@ -56,7 +56,7 @@ int|成功返回0；失败返回-1
 
 **remoteVtWord(String content)**
 
-**方式说明**
+**方法说明**
 
 删除激活词
 
@@ -74,7 +74,7 @@ int|成功返回0；失败返回-1
 
 **getVtWords()**
 
-**方式说明**
+**方法说明**
 
 获取激活词
 
@@ -86,7 +86,7 @@ ArrayList|成功返回激活词集合；失败返回一个空的集合
 
 **setSkillOption(String skillOption)**
 
-**方式说明**
+**方法说明**
 
 同步客户端信息到云端
 
@@ -104,7 +104,7 @@ int|成功返回0；失败返回-1
 
 **updateStack(String currAppId,String prevAppId)**
 
-**方式说明**
+**方法说明**
 
 更新云端NLP栈信息
 
@@ -124,9 +124,9 @@ int|成功返回0；失败返回-1
 ### 内部类
 |类型|名称|描述|
 |:--:|:--|:--|
-|enum|Action|语音控制意图枚举定义：</br>`ACTION_SET_STATE_AWAKE` 设置当前从休眠状态进入激活状态，此时不用说激活词直接语音命令即可，也可以通过说休眠词进入休眠状态</br>`ACTION_SET_STATE_SLEEP` 设置当前从激活状态进入休眠状态，此时可以通过唤醒词再次进入激活状态</br>`ACTION_OPEN_MIC` 打开麦克风，此时可以通过唤醒词进入激活状态</br>`ACTION_CLOSE_MIC` 关闭麦克风，需要打开麦克风才能通过唤醒词唤醒|
-|enum|Event|语音唤醒事件枚举定义：</br>`EVENT_VOICE_COMING` 激活即将开始</br>`EVENT_VOICE_LOCAL_WAKE` 本地已经激活</br>`EVENT_VOICE_START` 开始上传VAD</br>`EVENT_VOICE_NONE` 二次确认结果为空，只出于已经在激活状态下，直接说语音命令</br>`EVENT_VOICE_ACCEPT` 云端二次确认通过</br>`EVENT_VOICE_REJECT` 云端二次确认不通过</br>`EVENT_VOICE_CANCEL` 取消当前上传VAD<br>`EVENT_VOICE_LOCAL_SLEEP` 通过休眠词从激活状态进入休眠状态|
-|enum|ExceptionCode|异常状态定义：</br>`EXCEPTION_SERVICE_INTERNAL` 语音内部错误 </br> `EXCEPTION_ASR_TIMEOUT` ASR识别超时
+|enum|Action|语音控制意图枚举定义：<br> `ACTION_SET_STATE_AWAKE` 设置当前从休眠状态进入激活状态，此时不用说激活词直接语音命令即可，也可以通过说休眠词进入休眠状态<br>`ACTION_SET_STATE_SLEEP` 设置当前从激活状态进入休眠状态，此时可以通过唤醒词再次进入激活状态<br>`ACTION_OPEN_MIC` 打开麦克风，此时可以通过唤醒词进入激活状态<br>`ACTION_CLOSE_MIC` 关闭麦克风，需要打开麦克风才能通过唤醒词唤醒|
+|enum|Event|语音唤醒事件枚举定义：<br>`EVENT_VOICE_COMING` 激活即将开始<br>`EVENT_VOICE_LOCAL_WAKE` 本地已经激活<br>`EVENT_VOICE_START` 开始上传VAD<br>`EVENT_VOICE_NONE` 二次确认结果为空，只出于已经在激活状态下，直接说语音命令<br>`EVENT_VOICE_ACCEPT` 云端二次确认通过<br>`EVENT_VOICE_REJECT` 云端二次确认不通过<br>`EVENT_VOICE_CANCEL` 取消当前上传VAD<br>`EVENT_VOICE_LOCAL_SLEEP` 通过休眠词从激活状态进入休眠状态|
+|enum|ExceptionCode|异常状态定义：<br>`EXCEPTION_SERVICE_INTERNAL` 语音内部错误 <br> `EXCEPTION_ASR_TIMEOUT` ASR识别超时
 |class|VtWord|激活词信息：`type` 激活词类型，`word`激活词中文字符表示形式，`pinyin`激活词拼音字符+音调表示形式(例：若琪 ruo4qi2，ruo为四声，qi为二声)|
 |enum|Type|激活词类型枚举定义：`AWAKE`唤醒词，`SLEEP`休眠词，`HOTWORD`热词，`OTHER`保留|
 |interface|Callback|接收识别结果的回调接口定义，详细介绍见第3节Callback接口说明|
@@ -144,7 +144,7 @@ void | onException(ExceptionCode code)|语音识别出错
 
 **onVoiceEvent(Event event,float sl,float energy))**
 
-**方式说明**
+**方法说明**
 
 语音事件回调接口
 
@@ -158,7 +158,7 @@ energy|float|当前说话能量值(0到1之间的浮点数)
 
 **onIntermediateResult(String asr，boolean isFinal)**
 
-**方式说明**
+**方法说明**
 
 语音识别中间结果，可能回调多次
 
@@ -171,7 +171,7 @@ isFinal|boolean|是否是最终完整的语音转文字结果
 
 **onRecognizeResult(String nlp,String action)**
 
-**方式说明**
+**方法说明**
 
 最终语音识别回调接口
 
@@ -184,7 +184,7 @@ action|String|云端skill结果
 
 **onException(ExceptionCode code)**
 
-**方式说明**
+**方法说明**
 
 语音识别出错
 
