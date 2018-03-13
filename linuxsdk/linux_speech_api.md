@@ -8,8 +8,8 @@ Rokid Speech 语音合成 SDK 初始化
 
 | ~      | 名称    | 类型                  | 描述                                    |
 | ------ | ------- | --------------------- | --------------------------------------- |
-| 接口   | prepare |                       | speech sdk初始化                        |
-| 参数   | options | PrepareOptions | 选项，详见PrepareOptions数据结构 |
+| 接口   | prepare |                       | speech sdk 初始化                        |
+| 参数   | options | PrepareOptions | 选项，详见 PrepareOptions 数据结构 |
 | 返回值 |         | bool                  | true 成功 false 失败                    |
 
 **示例代码**
@@ -36,7 +36,7 @@ popts.device_id = "SmartDonkey";
 
 | ~      | 名称    | 类型 | 描述           |
 | ------ | ------- | ---- | -------------- |
-| 接口   | release |      | speech sdk关闭 |
+| 接口   | release |      | speech sdk 关闭 |
 | 参数   | 无      |      |                |
 | 返回值 | 无      |      |                |
 
@@ -48,14 +48,14 @@ Rokid 语音识别服务允许用户直接发送文字，并根据用户发送�
 
 | ~      | 名称     | 类型        | 描述           |
 | ------ | -------- | ----------- | -------------- |
-| 接口   | put_text |             | 发起文本speech |
-| 参数   | text     | const char* | speech文本     |
+| 接口   | put_text |             | 发起文本 speech |
+| 参数   | text     | const char* | speech 文本     |
 | 返回值 |          | int32       | speech id      |
 
 **示例代码**
 
 ```
-// 文本speech请求
+// 文本 speech 请求
 speech->put_text("若琪你好");
 
 ```
@@ -69,14 +69,14 @@ speech->put_text("若琪你好");
 | ~      | 名称        | 类型                | 描述                                                        |
 | ------ | ----------- | ------------------- | ----------------------------------------------------------- |
 | 接口   | start_voice |                     | 发起语音speech                                              |
-| 参数   | options     | VoiceOptions | 当前语音speech的选项，详见VoiceOptions。此参数可不带 |
+| 参数   | options     | VoiceOptions | 当前语音 speech 的选项，详见 VoiceOptions。此参数可不带 |
 | 返回值 |             | int32               | speech id                                                   |
 
 **示例代码**
 
 ```
-// 语音speech请求
-// 不设置VoiceOptions，全部使用默认值。
+// 语音 speech 请求
+// 不设置 VoiceOptions，全部使用默认值。
 int32_t id = speech->start_voice();
 ```
 
@@ -88,7 +88,7 @@ int32_t id = speech->start_voice();
 
 | ~      | 名称      | 类型         | 描述                                           |
 | ------ | --------- | ------------ | ---------------------------------------------- |
-| 接口   | put_voice |              | 发送语音数据, 一次speech的语音数据可分多次发送 |
+| 接口   | put_voice |              | 发送语音数据, 一次 speech 的语音数据可分多次发送 |
 | 参数   | id        | int32        | speech id                                      |
 | 参数   | data      | const uint8* | 语音数据                                       |
 | 参数   | length    | uint32       | 数据长度                                       |
@@ -106,7 +106,7 @@ speech->put_voice(id, ...);
 
 | ~      | 名称      | 类型  | 描述                                |
 | ------ | --------- | ----- | ----------------------------------- |
-| 接口   | end_voice |       | 通知sdk语音数据发送完毕，结束speech |
+| 接口   | end_voice |       | 通知 sdk 语音数据发送完毕，结束 speech |
 | 参数   | id        | int32 | speech id                           |
 | 返回值 | 无        |       |                                     |
 
@@ -114,11 +114,11 @@ speech->put_voice(id, ...);
 
 **接口说明**
 
-当用户调用了startVoice请求之后，如果想取消语音识别，可调用此方法，而不是endVoice方法
+当用户调用了 startVoice 请求之后，如果想取消语音识别，可调用此方法，而不是 endVoice 方法
 
 | ~      | 名称   | 类型  | 描述                 |
 | ------ | ------ | ----- | -------------------- |
-| 接口   | cancel |       | 取消指定的speech请求 |
+| 接口   | cancel |       | 取消指定的 speech 请求 |
 | 参数   | id     | int32 | speech id            |
 | 返回值 |        |       |                      |
 
@@ -130,8 +130,8 @@ speech->put_voice(id, ...);
 
 | ~      | 名称   | 类型                | 描述                                                         |
 | ------ | ------ | ------------------- | ------------------------------------------------------------ |
-| 接口   | poll   |                     | 获取speech结果数据。如无数据则一直阻塞等待，sdk关闭立即返回false。 |
-| 参数   | result | SpeechResult | 成功时存放获取到的speech结果数据，详见 SpeechResult 数据结构 |
+| 接口   | poll   |                     | 获取 speech 结果数据。如无数据则一直阻塞等待，sdk 关闭立即返回 false。 |
+| 参数   | result | SpeechResult | 成功时存放获取到的 speech 结果数据，详见 SpeechResult 数据结构 |
 | 返回值 |        | bool                | true 成功 false sdk已关闭                                    |
 
 ## 9. 设置 speech 选项
@@ -142,8 +142,8 @@ speech->put_voice(id, ...);
 
 | ~      | 名称    | 类型                 | 描述                     |
 | ------ | ------- | -------------------- | ------------------------ |
-| 接口   | config  |                      | 设置speech选项           |
-| 参数   | options | SpeechOptions | 详见SpeechOptions |
+| 接口   | config  |                      | 设置 speech 选项           |
+| 参数   | options | SpeechOptions | 详见 SpeechOptions |
 | 返回值 | 无      |                      |                          |
 
 
@@ -153,13 +153,13 @@ speech->put_voice(id, ...);
 
 | 名称           | 类型   | 描述                      |
 | -------------- | ------ | ------------------------- |
-| host           | string | tts服务host               |
-| port           | uint32 | tts服务port               |
-| branch         | string | tts服务url path           |
-| key            | string | tts服务认证key            |
-| device_type_id | string | 设备类型，用于tts服务认证 |
-| secret         | string | 用于tts服务认证           |
-| device_id      | string | 设备id，用于tts服务认证   |
+| host           | string | tts 服务host               |
+| port           | uint32 | tts 服务port               |
+| branch         | string | tts 服务url path           |
+| key            | string | tts 服务认证key            |
+| device_type_id | string | 设备类型，用于 tts 服务认证 |
+| secret         | string | 用于 tts 服务认证           |
+| device_id      | string | 设备 id，用于 tts 服务认证   |
 
 
 **VoiceOptions**
@@ -177,8 +177,8 @@ speech->put_voice(id, ...);
 **SpeechResult**
 | 名称   | 类型                  | 描述                                                         |
 | ------ | --------------------- | ------------------------------------------------------------ |
-| id     | int32                 | speech请求id                                                 |
-| type   | enum SpeechResultType | 0: speech中间结果<br>1: speech结果开始<br>2: speech asr完整结果<br>3: speech nlp/action结果<br>4: speech取消<br>5: speech出错 |
+| id     | int32                 | speech 请求 id                                                 |
+| type   | enum SpeechResultType | 0: speech 中间结果<br>1: speech 结果开始<br>2: speech asr 完整结果<br>3: speech nlp/action 结果<br>4: speech 取消<br>5: speech 出错 |
 | err    | enum SpeechError      | 详见[错误码](../common/err_code.md)                                       |
 | asr    | string                | 语音转文本的结果                                             |
 | nlp    | string                | 自然语义解析结果                                             |
@@ -187,30 +187,30 @@ speech->put_voice(id, ...);
 
 
 **SpeechOptions**
-使用set\_xxx接口设定选项值，未设定的值将不会更改旧有的设定值
+使用 set\_xxx 接口设定选项值，未设定的值将不会更改旧有的设定值
 
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
-|接口 | set\_lang | | 设定文字语言。设定speech put\_text接口要发送的文本的语言; 影响语音识别结果'asr'的文本语言|
-|参数 | lang | enum Lang | 限定值ZH EN|
+|接口 | set\_lang | | 设定文字语言。设定 speech put\_text 接口要发送的文本的语言; 影响语音识别结果 'asr' 的文本语言|
+|参数 | lang | enum Lang | 限定值 ZH EN|
 
 
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
-|接口 | set\_codec | | 设定语音编码。指定put\_voice接口发送的语音编码格式|
-|参数 | codec | enum Codec | 限定值PCM OPU|
+|接口 | set\_codec | | 设定语音编码。指定 put\_voice 接口发送的语音编码格式|
+|参数 | codec | enum Codec | 限定值 PCM OPU |
 
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
 |接口 | set\_vad\_mode | | 设定语音起始结束检查在云端还是本地|
-|参数 | mode | enum VadMode | 限定值LOCAL CLOUD|
+|参数 | mode | enum VadMode | 限定值 LOCAL CLOUD|
 
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
-|接口 | set\_no\_nlp | | 设定是否需要服务端给出nlp结果|
+|接口 | set\_no\_nlp | | 设定是否需要服务端给出 nlp 结果|
 |参数 | v | boolean | |
 
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
-|接口 | set\_no\_intermediate\_asr | | 设定是否需要服务端给出中间asr结果|
+|接口 | set\_no\_intermediate\_asr | | 设定是否需要服务端给出中间 asr 结果|
 |参数 | v | boolean |
