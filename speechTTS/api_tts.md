@@ -295,4 +295,4 @@ device\_type\_id | String | 设备类型，用于语音识别服务认证
 secret | String | 用于语音识别服务认证
 device\_id | String | 设备id，用于语音识别服务认证
 
-获取key、id等参数，请参考[获取秘钥](../common/key_secret.md)章节
+获取key、id等参数，请参考[创建设备流程](../rookie-guide/create-device.md)章节
