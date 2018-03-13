@@ -14,9 +14,9 @@
    ```
       $(call inherit-product,vendor/rokid/sdk_v2/sdk_v2.mk) 
    ```
-   * 在 config 文件夹加下 添加 [Android.mk](../extra/Android_config.mk) 
-   * 在 executable 文件夹 添加 [Android.mk](../extra/Android_executable.mk)
-   * 在 shared-libraries 文件夹下添加 [Android.mk](../extra/Android_libs.mk)
+   * 在 config 文件夹加下 添加 [Android.mk](../extra/android_config.mk) 
+   * 在 executable 文件夹 添加 [Android.mk](../extra/android_executable.mk)
+   * 在 shared-libraries 文件夹下添加 [Android.mk](../extra/android_libs.mk)
    * 将预置到```system/bin/turenproc``` 可执行进程加入到工程的```init.*.rc```中,使之能够以 root 权限在开机启动,示例如下:
    ```
      service turenproc /system/bin/turenproc <port> <deviceName>
