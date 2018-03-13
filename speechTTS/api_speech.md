@@ -298,6 +298,10 @@ void | onError(int id,int errCode)| speech出错
 
 **onStart(int id)**
 
+**方式说明**
+
+通知开发者，语音识别的结果开始返回。
+
 **参数说明**
 
 字段| 类型 | 描述
@@ -305,6 +309,10 @@ void | onError(int id,int errCode)| speech出错
 id| int  | 当前Speech 请求的id
 
 **onIntermediateResult(int id,String asrResult，String extraResult)**
+
+**方法说明**
+
+持续返回当前语音识别出的文字
 
 **参数说明**
 

@@ -1,6 +1,9 @@
-###VoiceRecognize接口说明
+# API参考
+
+## VoiceRecognize
 
 rkvoicerec.jar中包含`VoiceRecognize`和`VoiceRecognizeBuilder`两个比较重要的类。使用`VoiceRecognizeBuilder`设置Rokid账号信息就能得到一个`VoiceRecognize`对象，账号获取方式见**附件1**。下面详细介绍`VoiceRecognize`内部类和接口定义：
+
 
 #### 1. 内部类:
 |类型|名称|描述|
@@ -11,6 +14,16 @@ rkvoicerec.jar中包含`VoiceRecognize`和`VoiceRecognizeBuilder`两个比较重
 |class|VtWord|激活词信息：`type` 激活词类型，`word`激活词中文字符表示形式，`pinyin`激活词拼音字符+音调表示形式(例：若琪 ruo4qi2，ruo为四声，qi为二声)|
 |enum|Type|激活词类型枚举定义：`AWAKE`唤醒词，`SLEEP`休眠词，`HOTWORD`热词，`OTHER`保留|
 |interface|Callback|接收识别结果的回调接口定义，详细介绍见第3节Callback接口说明|
+
+返回类型|方法|备注|
+---|---|---|
+int | control(Action action) | 开始接收语音数据流
+void | onText(int i,String s)| 给出当前已经转成语音的文字
+void | onVoice(int id,byte[] data)|语音数据流
+void | onCancel(int i)|语音转文字已经取消
+void | onComplete(int i)| 语音数据已经全部给出
+void | onError(int id,int i1)| 文字转语音出错
+
 
 #### 2. 公有函数：
 |	|类型|名称|描述|
