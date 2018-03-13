@@ -15,15 +15,6 @@ rkvoicerec.jar中包含`VoiceRecognize`和`VoiceRecognizeBuilder`两个比较重
 |enum|Type|激活词类型枚举定义：`AWAKE`唤醒词，`SLEEP`休眠词，`HOTWORD`热词，`OTHER`保留|
 |interface|Callback|接收识别结果的回调接口定义，详细介绍见第3节Callback接口说明|
 
-返回类型|方法|备注|
----|---|---|
-int | control(Action action) | 开始接收语音数据流
-void | onText(int i,String s)| 给出当前已经转成语音的文字
-void | onVoice(int id,byte[] data)|语音数据流
-void | onCancel(int i)|语音转文字已经取消
-void | onComplete(int i)| 语音数据已经全部给出
-void | onError(int id,int i1)| 文字转语音出错
-
 #### 2. 公有函数：
 |	|类型|名称|描述|
 |:--|:--|:--|:--|
