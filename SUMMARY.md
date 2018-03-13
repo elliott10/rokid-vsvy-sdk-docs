@@ -26,3 +26,6 @@
 * Linux基础架构
 * [错误码](common/err_code.md)
 * [Json格式配置字串](common/api_json.md)     
+* Linux基础架构
+     * [概述](/speechTTS/introduce.md)
+     * [目录结构](/linuxsdk/sdk_linux_dir.md)
