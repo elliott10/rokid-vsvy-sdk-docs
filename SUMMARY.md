@@ -11,7 +11,7 @@
     * [SDK 目录结构](fullLink/sdk_dir.md)
     * [快速集成](fullLink/init_quick.md)
     * [API 参考](fullLink/api_voicerecognize.md)
-* Android 语音识别基础架构
+* Android 语音识别合成系统集成
      * [概述](speechTTS/introduce.md)
      * [SDK 目录结构](speechTTS/sdk_dir.md)
      * [获取秘钥](common/key_secret.md) 
