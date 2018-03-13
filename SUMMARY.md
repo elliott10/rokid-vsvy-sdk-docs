@@ -32,3 +32,5 @@
      * API 接口
         * [语音合成服务](/linuxsdk/linux_tts_api.md)
         * [语音识别服务](/linuxsdk/linux_speech_api.md)
+* [错误码](common/err_code.md)
+* [Json格式配置字串](common/api_json.md)     
