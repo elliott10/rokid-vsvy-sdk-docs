@@ -14,9 +14,29 @@
    ```
       $(call inherit-product,vendor/rokid/sdk_v2/sdk_v2.mk) 
    ```
-   * 在 config 文件夹加下 添加 [Android.mk](../extra/android_config.mk) 
-   * 在 executable 文件夹 添加 [Android.mk](../extra/android_executable.mk)
-   * 在 shared-libraries 文件夹下添加 [Android.mk](../extra/android_libs.mk)
+   * 在 config 文件夹加下 添加```Android.mk```文件 ,并添加如下内容
+   ```
+    LOCAL_PATH := $(call my-dir)
+    $(shell mkdir -p $(TARGET_OUT))
+    $(shell cp -r $(LOCAL_PATH)/workdir_asr_cn $(TARGET_OUT)/)
+   ```
+   * 在 executable 文件夹 添加 ```Android.mk```,并添加如下内容
+   ```
+    LOCAL_PATH := $(call my-dir)
+    $(shell mkdir -p $(TARGET_OUT)/bin)
+    $(shell cp $(LOCAL_PATH)/turenproc $(TARGET_OUT)/bin)
+   ```
+   * 在 shared-libraries 文件夹下添加 ```Android.mk```,并添加如下内容
+   ```
+    LOCAL_PATH := $(call my-dir)
+    ifeq ($(TARGET_ARCH),arm64)
+        $(shell mkdir -p $(TARGET_OUT)/lib64)
+        $(shell cp -r $(LOCAL_PATH)/arm64-v8a/* $(TARGET_OUT)/lib64)
+    else
+        $(shell mkdir -p $(TARGET_OUT)/lib)
+        $(shell cp -r $(LOCAL_PATH)/armeabi-v7a/* $(TARGET_OUT)/lib)
+    endif
+   ```
    * 将预置到```system/bin/turenproc``` 可执行进程加入到工程的```init.*.rc```中,使之能够以 root 权限在开机启动,示例如下:
    ```
      service turenproc /system/bin/turenproc <port> <deviceName>
@@ -37,7 +57,7 @@
 ### 集成注意事项
 
  * 目前Android全链路前端语音识别部分仅支持32位armeabi-v7a so文件输出,64位支持正在开发中,敬请期待.
- * 由于前端拾音模块需要读取Mic数据,因此各个客户/集成开发者需要在hal层实现mic设备的open以及read等接口,并以```"mic_array"```为```HAL_MODULE_INFO_SYM``` 的 id.具体接口为 android 标准的硬件设备hal层实现,具体可参考 [mic_array.c](../extra/mic_array.c) & [mic_array.h](../extra/mic_array.h) 的实现.目前支持的 mic 阵列数据采集格式至少为```16K/16bit/单通道``` 的数据格式.
+ * 由于前端拾音模块需要读取Mic数据,因此各个客户/集成开发者需要在hal层实现mic设备的open以及read等接口,并以```"mic_array"```为```HAL_MODULE_INFO_SYM``` 的 id.具体接口为 android 标准的硬件设备hal层实现,具体可参考 [mic_array.c](../extra/mic_array.c) & [mic_array.h](../extra/mic_array.h) 的实现(请右键另存为 将文件下载保存).目前支持的 mic 阵列数据采集格式至少为```16K/16bit/单通道``` 的数据格式.
 
 ### 接口调用说明
 * 请参考[Android全链路接口调用说明](api_voicerecognize.md)
