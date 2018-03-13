@@ -29,3 +29,10 @@
 * Linux基础架构
      * [概述](/speechTTS/introduce.md)
      * [目录结构](/linuxsdk/sdk_linux_dir.md)
+     * 快速集成
+        * [集成前准备](/linuxsdk/init_linux_prepare.md)
+        * [开始集成](/linuxsdk/begin_integrate.md)
+     * API 接口
+        * 语音合成服务(/linuxsdk/linux_tts_api.md)
+        * 语音识别服务(/linuxsdk/linux_speech_api.md)
+

@@ -106,7 +106,7 @@ cb | SpeechCallback | speech回调接口对象
             }
 
             @Override
-            public void onCancel(int i) {
+            public void onw/Cancel(int i) {
                 LogUtil.d("onCancel " + i);
             }
 
