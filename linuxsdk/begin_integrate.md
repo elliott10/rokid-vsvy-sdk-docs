@@ -6,12 +6,15 @@
 
    ```
 $ unzip Rokid_voice_sdk_v2_[timestamp].zip
-$ cd speech_sdk
+$ cd [B019AC5A400B4BECB2DEAAA58279502C]
    ```
 
-解压后生成两个文件夹 **speech** 和 **uws**
 
-例如：timestamp = 20180311170803
+解压进入后生成三个文件夹 **speech**，**uws** 和 **speechConfig.json**
+
+例如：timestamp = 20180311170803<br>
+      B019AC5A400B4BECB2DEAAA58279502C 是解压出来的文件夹名称
+
 
 ## 2. 编译
 
