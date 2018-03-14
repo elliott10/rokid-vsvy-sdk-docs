@@ -6,12 +6,14 @@
 
    ```
 $ unzip Rokid_voice_sdk_v2_[timestamp].zip
-$ cd speech_sdk
+$ cd [B019AC5A400B4BECB2DEAAA58279502C]
    ```
 
-解压后生成两个文件夹 **speech** 和 **uws**
 
-例如：timestamp = 20180311170803
+解压进入后生成三个文件夹 **speech**，**uws** 和 **speechConfig.json**
+
+例如：timestamp = 20180311170803<br>
+      B019AC5A400B4BECB2DEAAA58279502C 是解压出来的文件夹名称
 
 ## 2. 编译
 
@@ -20,8 +22,8 @@ $ cd speech_sdk
 非交叉编译适用于 ubuntu 系统或在树莓派上安装 ubuntu 系统的环境。方法如下：
 
 * 安装 cmake
-  ```
-  $ sudo apt-get install cmake
+  ```
+  $ sudo apt-get install cmake
   ```
   
 * 安装 openssl 
@@ -50,7 +52,7 @@ $ cd speech_sdk
     $ sudo apt-get install libopus-dev
     ```
 
-  * 编译生成 build 目录
+    * 编译生成 build 目录
 
     build 目录是生成 tts、speech 可执行程序的目标文件夹
 
@@ -121,7 +123,7 @@ $ cd build/
 $ make
 ```
 
-编译完成后会生成 demo_tts，demo_speech 等可执行程序
+编译完成后会生成 demo_tts，d	emo_speech 等可执行程序
 
 ## 5. 运行
 
@@ -140,3 +142,4 @@ $ ./demo_speech xxx.wav（音频文件）
 ```
 
 执行完之后会识别语音信息，并且解析 nlp（自然语言处理）
+
