@@ -1,11 +1,127 @@
 # API参考
 
+rkvoicerec.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两个比较重要的类。
+使用```VoiceRecognizeBuilder```设置Rokid账号信息就能得到一个```VoiceRecognize```对象，账号获取方式见[创建设备流程](../rookie-guide/create-device.md)。
+下面详细介绍```VoiceRecognize```内部类和接口定义。
+
+
 ## VoiceRecognize
 
-rkvoicerec.jar中包含`VoiceRecognize`和`VoiceRecognizeBuilder`两个比较重要的类。使用`VoiceRecognizeBuilder`设置Rokid账号信息就能得到一个`VoiceRecognize`对象，账号获取方式见**附件1**。下面详细介绍`VoiceRecognize`内部类和接口定义：
+**方法预览**
 
+返回类型|返回值|方法|备注|
+---|---|---|---|
+int|成功返回0；失败返回-1|control(Action action)| 控制语音激活
+int|成功返回0；失败返回-1|addVtWord(VtWord vtWord)| 添加激活词
+int|成功返回0；失败返回-1|remoteVtWord(String content)|删除激活词
+ArrayList|成功返回激活词集合；失败返回一个空的集合|getVtWords()|获取激活词
+int|成功返回0；失败返回-1|setSkillOption(String skillOption)|同步客户端信息到云端
+int|成功返回0；失败返回-1|updateStack(String currAppId,String prevAppId)|更新云端NLP栈信息
 
-#### 1. 内部类:
+**control(Action action)**
+
+**方式说明**
+
+控制语音激活
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+action|Action|控制意图
+
+**返回说明**
+
+类型|  描述
+---|---|
+int|成功返回0；失败返回-1
+
+**addVtWord(VtWord vtWord)**
+
+**方式说明**
+
+添加激活词
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+vtWord|VtWord|激活词信息
+
+**返回说明**
+
+类型|  描述
+---|---|
+int|成功返回0；失败返回-1
+
+**remoteVtWord(String content)**
+
+**方式说明**
+
+删除激活词
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+content|String|需要删除的激活词utf-8字符串
+
+**返回说明**
+
+类型|  描述
+---|---|
+int|成功返回0；失败返回-1
+
+**getVtWords()**
+
+**方式说明**
+
+获取激活词
+
+**返回说明**
+
+类型|  描述
+---|---|
+ArrayList|成功返回激活词集合；失败返回一个空的集合
+
+**setSkillOption(String skillOption)**
+
+**方式说明**
+
+同步客户端信息到云端
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+skillOption|String|当前skill运行状态信息
+
+**返回说明**
+
+类型|  描述
+---|---|
+int|成功返回0；失败返回-1
+
+**updateStack(String currAppId,String prevAppId)**
+
+**方式说明**
+
+更新云端NLP栈信息
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+currAppId|String|执行当前语音命令的应用AppId
+prevAppId|String|执行上一条语音命令的应用AppId
+
+**返回说明**
+
+类型|  描述
+---|---|
+int|成功返回0；失败返回-1
+
+### 内部类
 |类型|名称|描述|
 |:--:|:--|:--|
 |enum|Action|语音控制意图枚举定义：</br>`ACTION_SET_STATE_AWAKE` 设置当前从休眠状态进入激活状态，此时不用说激活词直接语音命令即可，也可以通过说休眠词进入休眠状态</br>`ACTION_SET_STATE_SLEEP` 设置当前从激活状态进入休眠状态，此时可以通过唤醒词再次进入激活状态</br>`ACTION_OPEN_MIC` 打开麦克风，此时可以通过唤醒词进入激活状态</br>`ACTION_CLOSE_MIC` 关闭麦克风，需要打开麦克风才能通过唤醒词唤醒|
@@ -15,86 +131,73 @@ rkvoicerec.jar中包含`VoiceRecognize`和`VoiceRecognizeBuilder`两个比较重
 |enum|Type|激活词类型枚举定义：`AWAKE`唤醒词，`SLEEP`休眠词，`HOTWORD`热词，`OTHER`保留|
 |interface|Callback|接收识别结果的回调接口定义，详细介绍见第3节Callback接口说明|
 
+
+## 回调接口
+###  VoiceRecognize.Callback
+
 返回类型|方法|备注|
 ---|---|---|
-int | control(Action action) | 开始接收语音数据流
-void | onText(int i,String s)| 给出当前已经转成语音的文字
-void | onVoice(int id,byte[] data)|语音数据流
-void | onCancel(int i)|语音转文字已经取消
-void | onComplete(int i)| 语音数据已经全部给出
-void | onError(int id,int i1)| 文字转语音出错
+void | onVoiceEvent(Event event,float sl,float energy) | 语音事件回调接口
+void | onIntermediateResult(String asr，boolean isFinal)| 语音识别中间结果，可能回调多次
+void | onRecognizeResult(String nlp,String action)|最终语音识别回调接口
+void | onException(ExceptionCode code)|语音识别出错
 
-#### 2. 公有函数：
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||control|控制语音激活|
-|参数|Action|action|控制意图|
-|返回值||int|成功返回0；失败返回-1
-    
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||addVtWord|添加激活词|
-| 参数|VtWord|vtWord|激活词信息|
-|返回值||int|成功返回0；失败返回-1
-    
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||remoteVtWord|删除激活词|
-|参数|String|content|需要删除的激活词utf-8字符串|
-|返回值||int|成功返回0；失败返回-1
+**onVoiceEvent(Event event,float sl,float energy))**
 
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||getVtWords||
-|参数|无|无|
-|返回值||ArrayList|成功返回激活词集合；失败返回一个空的集合
-    
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||setSkillOption|同步客户端信息到云端|
-|参数|String|skillOption|当前skill运行状态信息|
-|返回值||int|成功返回0；失败返回-1
+**方式说明**
 
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||updateStack|更新云端NLP栈信息|
-|参数|String|currAppId|执行当前语音命令的应用AppId|
-|参数|String|prevAppId|执行上一条语音命令的应用AppId|
-|返回值||int|成功返回0；失败返回-1
+语音事件回调接口
 
-#### 3. Callback接口说明：
+**参数说明**
 
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||onVoiceEvent|语音事件回调接口|
-|参数|Event|event|语音事件|
-|参数|float|sl|当前唤醒角度(0到360度之间)|
-|参数|float|energy|当前说话能量值(0到1之间的浮点数)|
-|返回值|无||
+字段| 类型 | 描述
+---|---|---|
+event| Event  | 语音事件
+sl|float|当前唤醒角度(0到360度之间)
+energy|float|当前说话能量值(0到1之间的浮点数)
 
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||onIntermediateResult|语音识别中间结果，可能回调多次|
-|参数|String|asr|语音转文字结果|
-|参数|boolean|isFinal|是否是最终完整的语音转文字结果|
-|返回值|无||
+**onIntermediateResult(String asr，boolean isFinal)**
 
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||onRecognizeResult|最终语音识别回调接口|
-|参数|String|nlp|自然语义解析结果|
-|参数|String|action|云端skill结果|
-|返回值|无||
+**方式说明**
 
-|	|类型|名称|描述|
-|:--|:--|:--|:--|
-|接口||onException|语音识别出错|
-|参数|ExceptionCode|code|错误码|
-|返回值|无||
+语音识别中间结果，可能回调多次
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+asr|String|语音转文字结果
+isFinal|boolean|是否是最终完整的语音转文字结果
+
+**onRecognizeResult(String nlp,String action)**
+
+**方式说明**
+
+最终语音识别回调接口
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+nlp|String|自然语义解析结果
+action|String|云端skill结果
+
+**onException(ExceptionCode code)**
+
+**方式说明**
+
+语音识别出错
+
+**参数说明**
+
+字段| 类型 | 描述
+---|---|---|
+code|ExceptionCode|错误码
    
-#### 示例：
+## 示例代码
 
-    import android.util.Log;
+```java
+import android.util.Log;
     
     import com.rokid.voicerec.VoiceRecognize;
     import com.rokid.voicerec.VoiceRecognizeBuilder;
@@ -145,16 +248,8 @@ void | onError(int id,int i1)| 文字转语音出错
             return null;
         }   
     }
-
-#####附件1：
-
->1、进入[Rokid开放平台](https://developer.rokid.com/#/)申请Rokid账号，已经有Rokid账号的同学可直接登录（但需进行部分信息补全）。
->
-2、登录后点选「语音接入」进行设备认证信息申请。
->
-3、具体做法：语音接入 > 创建新设备 > 填写设备名称 > 创建认证文件。之后您将获得：
->
-account\_id、device\_type\_id、device\_id、secret、key
+    
+```
 
 
 
