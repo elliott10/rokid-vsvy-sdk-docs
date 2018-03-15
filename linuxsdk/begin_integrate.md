@@ -52,8 +52,8 @@ $ cd [B019AC5A400B4BECB2DEAAA58279502C]
     $ cd ../speech/
     $ sudo apt-get install libopus-dev
     ```
-
-    * 编译生成 build 目录
+  
+  * 编译生成 build 目录
 
     build 目录是生成 tts、speech 可执行程序的目标文件夹
 
@@ -124,7 +124,7 @@ $ cd build/
 $ make
 ```
 
-编译完成后会生成 demo_tts，d	emo_speech 等可执行程序
+编译完成后会生成 demo_tts，demo_speech 等可执行程序
 
 ## 5. 运行
 
