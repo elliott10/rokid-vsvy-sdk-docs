@@ -38,7 +38,7 @@ popts.device_id = "SmartDonkey";
 | ------ | ------- | ---- | -------------- |
 | 接口   | release |      | speech sdk关闭 |
 | 参数   | 无      |      |                |
-| 返回值 | 无      |      |                |
+| 返回值 | 无      |      |无                |
 
 ## 3. 文本识别
 
@@ -92,7 +92,7 @@ int32_t id = speech->start_voice();
 | 参数   | id        | int32        | speech id                                      |
 | 参数   | data      | const uint8* | 语音数据                                       |
 | 参数   | length    | uint32       | 数据长度                                       |
-| 返回值 | 无        |              |                                                |
+| 返回值 | 无        |              |         无                                       |
 
 **示例代码**
 
@@ -108,7 +108,7 @@ speech->put_voice(id, ...);
 | ------ | --------- | ----- | ----------------------------------- |
 | 接口   | end_voice |       | 通知sdk语音数据发送完毕，结束speech |
 | 参数   | id        | int32 | speech id                           |
-| 返回值 | 无        |       |                                     |
+| 返回值 | 无        |       |                                 无    |
 
 ##7. 取消语音识别请求
 
@@ -120,9 +120,9 @@ speech->put_voice(id, ...);
 | ------ | ------ | ----- | -------------------- |
 | 接口   | cancel |       | 取消指定的speech请求 |
 | 参数   | id     | int32 | speech id            |
-| 返回值 |        |       |                      |
+| 返回值 |        |       |     无                 |
 
-##8. 获取 sppech 结果数据 
+##8. 获取 speech 结果数据 
 
 **接口说明**
 
@@ -144,22 +144,22 @@ speech->put_voice(id, ...);
 | ------ | ------- | -------------------- | ------------------------ |
 | 接口   | config  |                      | 设置speech选项           |
 | 参数   | options | SpeechOptions | 详见SpeechOptions |
-| 返回值 | 无      |                      |                          |
+| 返回值 | 无      |                      | 无                         |
 
 
 # 数据结构
 
 **Speech.VoiceOptions**
 
-| 名称           | 类型   | 描述                      |
-| -------------- | ------ | ------------------------- |
-| host           | string | tts服务host               |
-| port           | uint32 | tts服务port               |
-| branch         | string | tts服务url path           |
-| key            | string | tts服务认证key            |
-| device_type_id | string | 设备类型，用于tts服务认证 |
-| secret         | string | 用于tts服务认证           |
-| device_id      | string | 设备id，用于tts服务认证   |
+名称 | 类型 | 描述
+---|---|---
+host | String | 语音识别服务host,一般为 ```apigwws.open.rokid.com```
+port | int | 语音识别服务port ```443```
+branch | String | 语音识别服务url path ```/api```
+key | String | 语音识别服务认证key
+device\_type\_id | String | 设备类型，用于语音识别服务认证
+secret | String | 用于语音识别服务认证
+device\_id | String | 设备id，用于语音识别服务认证
 
 
 **VoiceOptions**
@@ -170,11 +170,12 @@ speech->put_voice(id, ...);
 | voice\_trigger  | string | 激活词                     |
 | trigger\_start  | uint32 | 语音数据中激活词的开始位置 |
 | trigger\_length | uint32 | 激活词语音数据长度         |
-| skill\_options  | string |                            |
+| skill\_options  | string |                        无    |
 
 
 
 **SpeechResult**
+
 | 名称   | 类型                  | 描述                                                         |
 | ------ | --------------------- | ------------------------------------------------------------ |
 | id     | int32                 | speech请求id                                                 |
@@ -208,10 +209,9 @@ speech->put_voice(id, ...);
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
 |接口 | set\_no\_nlp | | 设定是否需要服务端给出nlp结果|
-|参数 | v | boolean | |
+|参数 | v | boolean | 无|
 
 |~ | 名称 | 类型 | 描述|
 |---|---|---|---|
 |接口 | set\_no\_intermediate\_asr | | 设定是否需要服务端给出中间asr结果|
-|参数 | v | boolean |
-
+|参数 | v | boolean |无|
