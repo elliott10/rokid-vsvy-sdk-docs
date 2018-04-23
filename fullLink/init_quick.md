@@ -44,7 +44,7 @@
      user root
      group root root
   ```
-  其中 port 为启动 turenproc 进程启动时所依赖的运行端口号,比如: ```30000```, ```deviceName``` 为在网站上下载sdk时选择前端麦克风时的 ```deviceName``` ,与生成的``` workdir_asr_cn ``` 文件加中 ```ctc.{deviceName}.cfg```文件中的```deviceName```必须保持一致.假如在网站上 ```deviceName``` 取名为 pebble ,则需要如下方式启动
+  其中 port 为启动 turenproc 进程启动时所依赖的运行端口号,比如: ```30000```, ```deviceName``` 为在网站上下载sdk时选择前端麦克风时的 ```deviceName``` ,与生成的``` workdir_asr_cn ``` 文件加中 ```ctc.{deviceName}.cfg```文件中的```deviceName```必须保持一致.假如在网站上 ```deviceName``` 取名为 ```pebble``` ,则需要如下方式启动
   ```
      service turenproc /system/bin/turenproc 30000 pebble
      class main
@@ -57,7 +57,7 @@
 ### 集成注意事项
 
  * 目前Android全链路前端语音识别部分仅支持32位armeabi-v7a so文件输出,64位支持正在开发中,敬请期待.
- * 由于前端拾音模块需要读取Mic数据,因此各个客户/集成开发者需要在hal层实现mic设备的open以及read等接口,并以```"mic_array"```为```HAL_MODULE_INFO_SYM``` 的 id.具体接口为 android 标准的硬件设备hal层实现,具体可参考 [mic_array.c](../extra/mic_array.c) & [mic_array.h](../extra/mic_array.h) 的实现(请右键另存为 将文件下载保存).目前支持的 mic 阵列数据采集格式至少为```16K/16bit/单通道``` 的数据格式.
+ * 由于前端拾音模块需要读取Mic数据,因此各个客户/集成开发者需要在hal层实现mic设备的open以及read等接口,并以```"mic_array"```为```HAL_MODULE_INFO_SYM``` 的 id.具体接口可参考[mic_array集成说明](introduce_mic_array.md),代码实现可参考 [mic_array.c](../extra/mic_array.c) & [mic_array.h](../extra/mic_array.h) 的实现(请右键另存为 将文件下载保存).目前支持的 mic 阵列数据采集格式至少为```16K/16bit/单通道``` 的数据格式.
 
 ### 接口调用说明
 * 请参考[Android全链路接口调用说明](api_voicerecognize.md)
