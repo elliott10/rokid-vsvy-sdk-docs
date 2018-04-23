@@ -1,8 +1,8 @@
-## mic_array实现简要说明
-### mic_array要实现的功能
+#### mic_array实现简要说明
+##### mic_array要实现的功能
 - mic_array模块要实现麦克风阵列的打开/读取数据功能,然后turenproc进程会根据标准的 ```android hw_module_t``` 的```open/start_stream/read_stream```  等方法读取mic阵列的数据,送给前端算法,进行数据处理.
 
-### mic_array要实现的接口
+##### mic_array要实现的接口
 ```
     int (*get_stream_buff_size) (struct mic_array_device_t *dev);
     int (*start_stream) (struct mic_array_device_t *dev);
@@ -12,9 +12,9 @@
     int (*read_stream) (struct mic_array_device_t *dev, char *buff, unsigned int frame_cnt);
     int (*config_stream) (struct mic_array_device_t *dev, int cmd, char *cmd_buff);
 ```
-- 如上接口均为audio hal层标准命名接口(可参考 ```mic_array.h``` 定义),需要各个厂商根据自己硬件麦克风阵列的打开以及读取方式,实现对应接口
+- 如上接口均为audio hal层标准命名接口(可参考  [mic_array.h](../extra/mic_array.h) 定义),需要各个厂商根据自己硬件麦克风阵列的打开以及读取方式,实现对应接口
 
-### mic_array 模块编译参考
+##### mic_array 模块编译参考
 ```
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
@@ -30,7 +30,7 @@ include $(BUILD_SHARED_LIBRARY)
 ```
 - 参考如上 ```Android.mk``` 的编写方式,在android源码中编译时,会将 ```mic_array``` 模块编译为 ```mic_array.{TARGET_DEVICE}.so``` ,生成目录为 ```out/target/product/{TARGET_DEVICE}/system/lib/hw/``` 
 
-### mic_array 几个主要的参数
+##### mic_array 几个主要的参数
 ```
 static struct pcm_config pcm_config_in = {
     .channels = 8,
