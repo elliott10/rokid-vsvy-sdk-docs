@@ -52,7 +52,7 @@
      group root root
   ```
 
-   * 将 java-libraries 下的静态jar包集成到一个系统应用中,来接收前端语音事件以及ASR/NLP,以提供的 example 中的 SpeechExecutor [模块说明](introduce_speechexecutor.md)为例,集成编译后会在```system/app/SpeechExecutor```下生成 SpeechExecutor.apk, 在系统开机配置好网络后,通过```adb shell am startservice com.rokid.voicerec/.SpeechExecutor``` 来启动Demo的service,然后通过Log查看是否有前端语音事件以及asr/nlp相关的log信息,如果有则证明集成OK.如果没有,请参考下边的集成注意事项或者联系我们.
+   * 将 java-libraries 下的静态jar包集成到一个系统应用中,来接收前端语音事件以及ASR/NLP,以提供的 example 中的 [SpeechExecutor模块说明](introduce_speechexecutor.md)为例,集成编译后会在```system/app/SpeechExecutor```下生成 SpeechExecutor.apk, 在系统开机配置好网络后,通过```adb shell am startservice com.rokid.voicerec/.SpeechExecutor``` 来启动Demo的service,然后通过Log查看是否有前端语音事件以及asr/nlp相关的log信息,如果有则证明集成OK.如果没有,请参考下边的集成注意事项或者联系我们.
 
 ### 集成注意事项
 

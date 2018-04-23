@@ -10,6 +10,8 @@
     * [概述](fullLink/introduce.md)
     * [SDK 目录结构](fullLink/sdk_dir.md)
     * [快速集成](fullLink/init_quick.md)
+     * [SpeechExecutor模块说明](fullLink/introduce_speechexecutor.md)
+     * [mic_array集成说明](fullLink/introduce_mic_array.md)
     * [API 参考](fullLink/api_voicerecognize.md)
 * Android 语音识别合成系统集成
      * [概述](speechTTS/introduce.md)

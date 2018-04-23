@@ -1,5 +1,5 @@
-#### mic_array实现简要说明
-##### mic_array要实现的功能
+#### mic_array 实现简要说明
+##### mic_array 要实现的功能
 - mic_array模块要实现麦克风阵列的打开/读取数据功能,然后turenproc进程会根据标准的 ```android hw_module_t``` 的```open/start_stream/read_stream```  等方法读取mic阵列的数据,送给前端算法,进行数据处理.
 
 ##### mic_array要实现的接口
