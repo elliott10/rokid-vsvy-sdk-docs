@@ -12,7 +12,7 @@
     int (*read_stream) (struct mic_array_device_t *dev, char *buff, unsigned int frame_cnt);
     int (*config_stream) (struct mic_array_device_t *dev, int cmd, char *cmd_buff);
 ```
-- 如上接口均为audio hal层标准命名接口(可参考  [mic_array.h](../extra/mic_array.h) 定义),需要各个厂商根据自己硬件麦克风阵列的打开以及读取方式,实现对应接口
+- 如上接口均为audio hal层标准命名接口(可参考  [mic_array.h](../../extra/mic_array.h) 定义),需要各个厂商根据自己硬件麦克风阵列的打开以及读取方式,实现对应接口
 
 ##### mic_array 模块编译参考
 ```
@@ -77,7 +77,13 @@ struct mic_array_module_t HAL_MODULE_INFO_SYM = {
 - 将下载的 ```SDK``` 中 ```shared-libraries/armeabi-v7a```下的 ```so``` 通过 ```adb push``` 的方式 推到设备```/system/lib/```中,比如在SDK解压目录下通过 ```adb push shared-libraries/armeabi-v7a/*.so /system/lib/``` 的命令将 ```so``` 推到设备的```/system/lib/``` 下
 - 将下载的 ```SDK``` 中 ```executable```下的 ```turenproc``` 通过 ```adb push``` 的方式 推到设备```/system/bin/```中,比如在SDK解压目录下通过 ```adb push executable/turenproc /system/bin/```的命令将 ```turenproc``` 推到设备的```/system/bin/``` 下
 - 将下载的 ```SDK``` 中 ```config```下的 ```workdir_cn``` 文件夹通过 ```adb push``` 的方式 推到设备```/system/```中,比如在SDK解压目录下通过 ```adb push config/workdir_cn /system/```的命令将 ```workdir_cn``` 推到设备的```/system/``` 下
-- 
+- 按照上边的```adb push ```命令将所需文件推到设备对应目录后,运行如下命令
+```
+adb root
+adb shell
+turenproc 30000 xxxx($TARGET_DEVICE)
+```
+将 ```turenproc``` 进程拉起来,查看输出日志是否有 ```Error``` 字样,如果无,则表明 ```turenproc``` 进程可以从集成的```mic_array.xxx.so``` 中读取到```mic``` 数据
 
 
 
