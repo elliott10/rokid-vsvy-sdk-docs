@@ -6,7 +6,7 @@
  - 说明文档目录
 
 ## example
- - 源码示例程序1(android 源码编译集成前端 + speech 的示例程序 ,目录:SpeechExecutor)
+ - 源码示例程序1(android 源码编译集成前端 + speech 的示例程序 ,目录:SpeechExecutor),详细模块说明请查看[example模块说明](introduce_speechexecutor.md)
 
 ## executable
 * turenproc   ---- 前端拾音服务 链接mic数据读取以及语音识别服务(speech)模块的可执行进程
