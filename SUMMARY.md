@@ -6,6 +6,11 @@
     * [创建设备流程](rookie-guide/create-device.md)
     * [认证文件使用方法](rookie-guide/usage.md) 
 * [重要概念](important-concept.md)
+* Tutorials
+    * [概述](tutorials/intro.md)
+    * [Example1: KWD+WWE+AIP集成](tutorials/example1/intro.md)
+    * [Example2: KWD+WWE+AIP+ASR+TTS+NLP集成](tutorials/example2/intro.md)
+    * [Example3: ASR+TTS+NLP集成](tutorials/example3/intro.md)
 * Android 全链路系统集成
     * [概述](fullLink/introduce.md)
     * [SDK 目录结构](fullLink/sdk_dir.md)
@@ -36,3 +41,5 @@
         * [语音识别服务](/linuxsdk/linux_speech_api.md)
 * [错误码](common/err_code.md)
 * [Json格式配置字串](common/api_json.md)     
+
+
