@@ -10,6 +10,11 @@
     * [概述](tutorials/intro.md)
     * [Example1: Android 前端拾音算法集成](tutorials/example1/intro.md)
     * [Example2: Android 前端拾音算法+语音识别集成](tutorials/example2/intro.md)
+     * [SDK目录结构](tutorials/example2/sdk_dir.md) 
+     * [配置前端配置文件](tutorials/example2/introduce_config.md)
+     * [Audio Input Hal 实现](tutorials/example2/introduce_mic_array.md)
+     * [集成sdk](tutorials/example2/introduce_prebuilt.md)
+     * [验证](tutorials/example2/test.md)
     * [Example3: Android 语音识别集成](tutorials/example3/intro.md)
 
 
