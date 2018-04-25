@@ -20,12 +20,17 @@
  - 目前SDK支持Android4.4及以上系统
 - SDK下载
  - 请在 [FTP](ftp://ftp-customer.rokid-inc.com:9921/speech_sdk/v2/DNN/)上下载SDK
-- [SDK目录结构](example2/sdk_dir.md)
+- SDK目录结构
+ - [SDK目录结构](sdk_dir.md) 
 - 软件设计框架图
-![](../img/softworare_frame.png)
+ - 框架图如下 ![](../img/softworare_frame.png)
 
 ### 集成
-1. [配置前端配置文件](example2/introduce_config.md)
-1. [Audio Input Hal 实现](example2/introduce_mic_array.md)
-2. [集成sdk](example2/introduce_prebuilt.md)
-3. [验证](example2/test.md)
+- step1
+ - [配置前端配置文件](introduce_config.md)
+- step2
+ - [Audio Input Hal 实现](introduce_mic_array.md)
+- step3
+ - [集成sdk](introduce_prebuilt.md)
+- step4
+ - [验证](test.md)
