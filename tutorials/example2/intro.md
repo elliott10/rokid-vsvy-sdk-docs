@@ -23,7 +23,7 @@
 - SDK目录结构
  - [SDK目录结构](sdk_dir.md) 
 - 软件设计框架图
- - 框架图如下 ![](https://github.com/Rokid/rokid-vsvy-sdk-docs/blob/master/img/softworare_frame.png)
+ - 框架图如下 ![](../../img/softworare_frame.png)
 
 ### 集成
 - step1
