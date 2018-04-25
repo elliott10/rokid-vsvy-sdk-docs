@@ -14,11 +14,11 @@
      * [硬件示例](tutorials/example2/introduce_hw.md)
      * [软件框架](tutorials/example2/introduce_sw.md)
        * [SDK目录结构](tutorials/example2/sdk_dir.md)  
-     * [集成](tutorials/example2/introduce_prebuilt.md)
-       * [配置前端配置文件](introduce_config.md)
-       * [Audio Input Hal 实现](introduce_mic_array.md)
-       * [集成sdk](introduce_prebuilt.md)
-       * [验证](test.md)
+     * [集成](tutorials/example2/introduce_include.md)
+       * [配置前端配置文件](tutorials/example2/introduce_config.md)
+       * [Audio Input Hal 实现](tutorials/example2/introduce_mic_array.md)
+       * [集成sdk](tutorials/example2/introduce_prebuilt.md)
+       * [验证](tutorials/example2/test.md)
     * [Example3: Android 语音识别集成](tutorials/example3/intro.md)
 
 
