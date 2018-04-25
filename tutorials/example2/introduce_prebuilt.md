@@ -1,6 +1,6 @@
 ### 预置SDK
 
-  * 将解压后的目录放到系统源码中,比如```/vendor/rokid/sdk_v2/``` 目录下,然后在此文件夹下添加如下 [sdk_v2.mk](../extra/sdk_v2.mk) ,同时按照以下步骤使sdk能够被系统编译到
+  * 将解压后的目录放到系统源码中,比如```/vendor/rokid/sdk_v2/``` 目录下,然后在此文件夹下添加如下 [sdk_v2.mk](../../extra/sdk_v2.mk) ,同时按照以下步骤使sdk能够被系统编译到
    * 在系统源码的```device/{platform}/{product}/*.mk``` 最后(此mk文件可以在编译时被编译到) 中添加如下
    ```
       $(call inherit-product,vendor/rokid/sdk_v2/sdk_v2.mk) 
