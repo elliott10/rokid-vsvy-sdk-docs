@@ -21,9 +21,17 @@
        * [集成sdk](tutorials/example2/introduce_prebuilt.md)
        * [验证](tutorials/example2/test.md)
      * [API调用说明](tutorials/example2/api_voicerecognize.md)
-    * [Example3: Android 语音识别集成](tutorials/example3/intro.md)
-
-
+    * [Example3: Android 语音识别及合成集成](tutorials/example3/intro.md)
+        * [概述](speechTTS/introduce.md)
+        * [SDK目录结构](speechTTS/sdk_dir.md)
+        * [集成](speechTTS/init.md)
+            * [集成前准备](speechTTS/init_prepare.md)
+            * [语音识别Speech集成](speechTTS/init_speech.md)
+            * [语音合成TTS集成](speechTTS/init_tts.md)
+        * API调用说明
+            * [语音识别Speech](speechTTS/api_speech.md)
+            * [语音合成TTS](speechTTS/api_tts.md)
+        * [示例DEMO](https://github.com/Rokid/RokidSpeechTTSDemo)
 * Linux基础架构
      * [概述](/speechTTS/introduce.md)
      * [目录结构](/linuxsdk/sdk_linux_dir.md)
