@@ -23,15 +23,15 @@
 
 - VoiceRecognize.Callback
 ```
-    void onVoiceEvent(Event event, float sl, float energy); ----接收前端Voice事件,第一个参数Event为具体的event值,第二个参数(sl)为寻向角度,第三个参数(energy)为语音的能量值,此值程序暂时不需要关心,只做调试使用.
+    void onVoiceEvent(int id,Event event, float sl, float energy); ----接收前端Voice事件,第一个参数Event为具体的event值,第二个参数(sl)为寻向角度,第三个参数(energy)为语音的能量值,此值程序暂时不需要关心,只做调试使用.
 ```
 ```
-    void onIntermediateResult(String asr, boolean isFinal); ----接收ASR,第一个参数为ASR的具体内容,第二个参数表示此ASR为中间识别结果 还是最终识别结果.false代表中间识别结果,比如语音输入"今天天气怎么样"时,ASR会阶段性的返回"今天"/"今天天气"/"今天天气怎么样"
+    void onIntermediateResult(int id,String asr, boolean isFinal); ----接收ASR,第一个参数为ASR的具体内容,第二个参数表示此ASR为中间识别结果 还是最终识别结果.false代表中间识别结果,比如语音输入"今天天气怎么样"时,ASR会阶段性的返回"今天"/"今天天气"/"今天天气怎么样"
 ```
 ```
-    void onRecognizeResult(String nlp, String action);  ----nlp的识别结果,第一个参数代表语音命中的具体NLP,如果为本地应用,需要解析此nlp来执行响应动作,如果为云端应用,则需要解析第二个参数(action)来执行对应的协议内容.
+    void onRecognizeResult(int id,String nlp, String action);  ----nlp的识别结果,第一个参数代表语音命中的具体NLP,如果为本地应用,需要解析此nlp来执行响应动作,如果为云端应用,则需要解析第二个参数(action)来执行对应的协议内容.
 ```
 ```
-    void onException(ExceptionCode errCode); ----语音数据交互过程中出现异常,参数为异常的errCode
+    void onException(int id,int errCode); ----语音数据交互过程中出现异常,参数为异常的errCode
 ```
 以上几个函数定义可参考详细的接口文档介绍[Android全链路接口调用说明](api_voicerecognize.md).
