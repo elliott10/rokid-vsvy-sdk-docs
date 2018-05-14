@@ -1,13 +1,15 @@
 #### 前端配置文件配置
-- 配置 ```dnn.xxx.cfg``` ,其中 ```xxx``` 值为 ```android``` 编译源码是的```${TARGET_DEVICE}```的值
+- 配置 ```ctc.xxx.cfg``` ,其中 ```xxx``` 值为 ```android``` 编译源码是的```${TARGET_DEVICE}```的值
 ```
 phonetable=phonetable
-dnn=final.svd.mod
+ctc=rasr.emb.ini
 words=ruoqi,meishile
+asr.line.num=4
+bf.num=12
 ```
  - phonetable: 音素表配置
- - dnn: 激活模型配置
- - words: 激活词配置,如上两个分别对应```workdir_cn```下的 ```word.ruoqi.cfg``` 和 ```word.meishile.cfg```
+ - ctc: 激活模型配置
+ - words: 激活词配置,如上两个分别对应```workdir_asr_cn```下的 ```word.ruoqi.cfg``` 和 ```word.meishile.cfg```
  
 - 配置 ```device.xxx.cfg``` , 其中 ```xxx``` 值为android编译源码是的 ```${TARGET_DEVICE}``` 的值
   - audio.rate=48000 // 采样率
@@ -34,11 +36,11 @@ words=ruoqi,meishile
   - mic.pos.5= 0,0,0 // 5mic 坐标位置
   - mic.pos.6= 0,0,0 // 6mic 坐标位置
   - mic.pos.7= 0,0,0 // 7mic 坐标位置
-  - mic.delay=0,96000,0,96000,0,96000,0,0 // 表示: 延时1/96000
+  - mic.delay=0,0,0,0,0,0,0,0  //ref通道不同时延时配置,默认都为0
   - codec=true // 是否opu编码后上传给服务端,默认需要
   - light.angle0=180 // 灯光起始角度
   - light.angle.mul=1 // 灯光角度偏移系数, 1/-1, 顺时针/逆时针
 
-- 将配置OK的前端配置文件放入 ```SDK``` 的 ```config/workdir_cn/```目录下
+- 将配置OK的前端配置文件放入 ```SDK``` 的 ```config/workdir_asr_cn/```目录下
 
 
