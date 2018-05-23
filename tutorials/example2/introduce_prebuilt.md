@@ -35,7 +35,7 @@
      user root
      group root root
   ```
-  其中 port 为启动 turenproc 进程启动时所依赖的运行端口号,比如: ```30000```, ```deviceName``` 为对应平台的```TARGET_DEVICE``` 值,``` workdir_cn ``` 文件夹中 ```dnn.{deviceName}.cfg```文件中的```deviceName```必须与之保持一致.比如 ```deviceName``` 为 ```pebble``` ,则需要如下方式启动
+  其中 port 为启动 turenproc 进程启动时所依赖的运行端口号,比如: ```30000```, ```deviceName``` 为对应平台的```TARGET_DEVICE``` 值,``` workdir_asr_cn ``` 文件夹中 ```dnn.{deviceName}.cfg```文件中的```deviceName```必须与之保持一致.比如 ```deviceName``` 为 ```pebble``` ,则需要如下方式启动
   ```
      service turenproc /system/bin/turenproc pebble
      class main

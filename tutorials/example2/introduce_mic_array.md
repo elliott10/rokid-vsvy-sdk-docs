@@ -76,7 +76,7 @@ struct mic_array_module_t HAL_MODULE_INFO_SYM = {
 - ```mic_array```的功能实现后,将生成的```out/target/product/{TARGET_DEVICE}/system/lib/hw/mic_array.$(TARGET_DEVICE).so``` 通过 ```adb push``` 命令```push``` 到设备```system/lib/hw/```目录下.
 - 将下载的 ```SDK``` 中 ```shared-libraries/armeabi-v7a```下的 ```so``` 通过 ```adb push``` 的方式 推到设备```/system/lib/```中,比如在SDK解压目录下通过 ```adb push shared-libraries/armeabi-v7a/*.so /system/lib/``` 的命令将 ```so``` 推到设备的```/system/lib/``` 下
 - 将下载的 ```SDK``` 中 ```executable```下的 ```turenproc``` 通过 ```adb push``` 的方式 推到设备```/system/bin/```中,比如在SDK解压目录下通过 ```adb push executable/turenproc /system/bin/```的命令将 ```turenproc``` 推到设备的```/system/bin/``` 下
-- 将下载的 ```SDK``` 中 ```config```下的 ```workdir_cn``` 文件夹通过 ```adb push``` 的方式 推到设备```/system/```中,比如在SDK解压目录下通过 ```adb push config/workdir_cn /system/```的命令将 ```workdir_cn``` 推到设备的```/system/``` 下
+- 将下载的 ```SDK``` 中 ```config```下的 ```workdir_asr_cn``` 文件夹通过 ```adb push``` 的方式 推到设备```/system/```中,比如在SDK解压目录下通过 ```adb push config/workdir_asr_cn /system/```的命令将 ```workdir_asr_cn``` 推到设备的```/system/``` 下
 - 按照上边的```adb push ```命令将所需文件推到设备对应目录后,运行如下命令
 ```
 adb root
