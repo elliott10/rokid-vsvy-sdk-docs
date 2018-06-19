@@ -22,91 +22,91 @@ RokidAiSdk集合Kenobi项目的BTS方案，算法端Turen相关功能，通过sp
 
    * IRokidAudioAiService.java  ASR 主Service的binder接口
 
-     | 返回值 | 方法和说明 |
-     | ------ | ------------------------------------------------------------ |
-     | `void` | `playTtsVoice(java.lang.String text)`用tts服务播放text语音   |
-     | `void` | `setUserMediaPlaying(boolean userMediaPlaying)`通知当前设备是否有用户媒体流在播放 |
-     | `boolean` | `srartAudioAiServer(ServerConfig config, IRokidAudioAiListener listener)`根据配置信息启动服务, 并注册Asr语音服务处理结果的监听（若当前服务已启动，则不会重新启动）        true：表示监听添加成功，false：表示监听添加失败，config中的Key、Secret、DeviceTypeId三个值与服务启动时的config中的三个值不相等 |
-     | `void` | `unRegistAudioAiListener(IRokidAudioAiListener listener)`注销Asr语音服务处理结果的监听 |
-     | `void` | `setAngle(int angle)` 设置麦克风寻向角度 angle（0 ~ 360） |
-     | `void` | `setPickUp(boolean open)` 在单独的激活模块中，主动开启拾音和关闭拾音 true: 开启拾音, false: 结束拾音 |
+| 返回值 | 方法和说明 |
+| ------ | ------------------------------------------------------------ |
+| `void` | `playTtsVoice(java.lang.String text)`用tts服务播放text语音   |
+| `void` | `setUserMediaPlaying(boolean userMediaPlaying)`通知当前设备是否有用户媒体流在播放 |
+| `boolean` | `srartAudioAiServer(ServerConfig config, IRokidAudioAiListener listener)`根据配置信息启动服务, 并注册Asr语音服务处理结果的监听（若当前服务已启动，则不会重新启动）        true：表示监听添加成功，false：表示监听添加失败，config中的Key、Secret、DeviceTypeId三个值与服务启动时的config中的三个值不相等 |
+| `void` | `unRegistAudioAiListener(IRokidAudioAiListener listener)`注销Asr语音服务处理结果的监听 |
+| `void` | `setAngle(int angle)` 设置麦克风寻向角度 angle（0 ~ 360） |
+| `void` | `setPickUp(boolean open)` 在单独的激活模块中，主动开启拾音和关闭拾音 true: 开启拾音, false: 结束拾音 |
      
    * IRokidAudioAiListener.java 监听AudioAiService服务对语音的处理结果
 
-     | 返回值 | 方法和说明 |
-     | ------ | ------------------------------------------------------------ |
-     | `void` | `onIntermediateSlice(String asr)`  返回语音识别中间结果片段    |
-     | `void` | `onIntermediateEntire(String asr)`  返回语音识别中间结果完整的数据 |
-     | `void` | `onCompleteNlp(String nlp, String action)` 返回最终语音识别结果（nlp：自然语义解析结果， action：云端skill结果） |
-     | `void` | `onVoiceEvent(int event, float sl, float energy)`  返回语音唤醒事件（event: 语音事件类型VoiceRecognize.Event的ordinal()值， sl：当前唤醒角度(0到360度之间)， energy：当前说话能量值(0到1之间的浮点数)） |
-     | `void` | `onRecognizeError(int errorCode)`  返回语音识别出错信息（errorCode：错误码 VoiceRecognize.ExceptionCode的ordinal()值） |
-     | `void` | `onServerSocketCreate(String ip, int port)` 接收pcm数据的socket启动成功时的回调 （ip：socket的ip地址， post：socket的端口） |
-     | `void` | `onPcmServerPrepared()`  发送算法处理过后的pcm数据的服务已经准备好  |
+| 返回值 | 方法和说明 |
+| ------ | ------------------------------------------------------------ |
+| `void` | `onIntermediateSlice(String asr)`  返回语音识别中间结果片段    |
+| `void` | `onIntermediateEntire(String asr)`  返回语音识别中间结果完整的数据 |
+| `void` | `onCompleteNlp(String nlp, String action)` 返回最终语音识别结果（nlp：自然语义解析结果， action：云端skill结果） |
+| `void` | `onVoiceEvent(int event, float sl, float energy)`  返回语音唤醒事件（event: 语音事件类型VoiceRecognize.Event的ordinal()值， sl：当前唤醒角度(0到360度之间)， energy：当前说话能量值(0到1之间的浮点数)） |
+| `void` | `onRecognizeError(int errorCode)`  返回语音识别出错信息（errorCode：错误码 VoiceRecognize.ExceptionCode的ordinal()值） |
+| `void` | `onServerSocketCreate(String ip, int port)` 接收pcm数据的socket启动成功时的回调 （ip：socket的ip地址， post：socket的端口） |
+| `void` | `onPcmServerPrepared()`  发送算法处理过后的pcm数据的服务已经准备好  |
 
    * ServiceConfig.java 启动参数配置类
 
-     | 返回值 | 方法和说明 |
-     | -------------- | ------------------------------------------------------------ |
-     | `ServerConfig` | `setCertificate(java.lang.String secretKey)`设置服务启动密匙 |
-     | `ServerConfig` | `ServerConfig setAssetsConfigPath(String path) ` 设置Assets目录中算法库配置文件路径 |
-     | `ServerConfig` | `setConfigFileName(java.lang.String fileName)`设置初始化turen配置文件名 |
-     | `ServerConfig` | `setDeviceId(java.lang.String mDeviceId)`设置设备的DeviceId， sn号 |
-     | `ServerConfig` | `setDeviceTypeId(java.lang.String mDeviceTypeId)`设置开放平台注册时生成的Type ID |
-     | `ServerConfig` | `setKey(java.lang.String key)`设置开放平台注册时生成的KEY    |
-     | `ServerConfig` | `setLogConfig(int logLevel, boolean showTurenLog, boolean showDecoderSoLog)`设置log等级 |
-     | `ServerConfig` | `setMustInit(boolean mustInit)`设置是否强制初始化            |
-     | `ServerConfig` | `setSecret(java.lang.String secret)`设置开放平台注册时生成的Secret |
-     | `ServerConfig` | `setShowDecoderSoLog(boolean show)`设置decode so日志是否展示 |
-     | `ServerConfig` | `setShowTurenLog(boolean show)`设置Turen Log的展示           |
-     | `ServerConfig` | `setTestWays(boolean testWays)`设置是否开启测试模式，识别服务器会有区别 |
-     | `ServerConfig` | `setUseNlp(boolean useNlp)`设置是否输出NLP功能               |
-     | `ServerConfig` | `setUseOtherAudio(boolean useOtherAudio)`设置是否使用用户自己的audio数据模块（默认使用SDK的BSP Audio数据模块），功能尚未完成 |
-     | `ServerConfig` | `setUsePcm(boolean usePcm)`设置是否输出PCM功能               |
+| 返回值 | 方法和说明 |
+| -------------- | ------------------------------------------------------------ |
+| `ServerConfig` | `setCertificate(java.lang.String secretKey)`设置服务启动密匙 |
+| `ServerConfig` | `ServerConfig setAssetsConfigPath(String path) ` 设置Assets目录中算法库配置文件路径 |
+| `ServerConfig` | `setConfigFileName(java.lang.String fileName)`设置初始化turen配置文件名 |
+| `ServerConfig` | `setDeviceId(java.lang.String mDeviceId)`设置设备的DeviceId， sn号 |
+| `ServerConfig` | `setDeviceTypeId(java.lang.String mDeviceTypeId)`设置开放平台注册时生成的Type ID |
+| `ServerConfig` | `setKey(java.lang.String key)`设置开放平台注册时生成的KEY    |
+| `ServerConfig` | `setLogConfig(int logLevel, boolean showTurenLog, boolean showDecoderSoLog)`设置log等级 |
+| `ServerConfig` | `setMustInit(boolean mustInit)`设置是否强制初始化            |
+| `ServerConfig` | `setSecret(java.lang.String secret)`设置开放平台注册时生成的Secret |
+| `ServerConfig` | `setShowDecoderSoLog(boolean show)`设置decode so日志是否展示 |
+| `ServerConfig` | `setShowTurenLog(boolean show)`设置Turen Log的展示           |
+| `ServerConfig` | `setTestWays(boolean testWays)`设置是否开启测试模式，识别服务器会有区别 |
+| `ServerConfig` | `setUseNlp(boolean useNlp)`设置是否输出NLP功能               |
+| `ServerConfig` | `setUseOtherAudio(boolean useOtherAudio)`设置是否使用用户自己的audio数据模块（默认使用SDK的BSP Audio数据模块），功能尚未完成 |
+| `ServerConfig` | `setUsePcm(boolean usePcm)`设置是否输出PCM功能               |
 
    * VoiceRecognize.Event  类型说明
 
-     | 类型 | 描述 |
-     | ---- | ------------------------------------------------------------ |
-     | enum | 语音唤醒事件枚举定义： `EVENT_VOICE_COMING` 激活即将开始 `EVENT_VOICE_LOCAL_WAKE` 本地已经激活`EVENT_VOICE_START` 开始上传VAD `EVENT_VOICE_NONE` 二次确认结果为空，只出于已经在激活状态下，直接说语音命令 `EVENT_VOICE_ACCEPT` 云端二次确认通过 `EVENT_VOICE_REJECT` 云端二次确认不通过 `EVENT_VOICE_CANCEL` 取消当前上传VAD `EVENT_VOICE_LOCAL_SLEEP` 通过休眠词从激活状态进入休眠状态 |
+| 类型 | 描述 |
+| ---- | ------------------------------------------------------------ |
+| enum | 语音唤醒事件枚举定义： `EVENT_VOICE_COMING` 激活即将开始 `EVENT_VOICE_LOCAL_WAKE` 本地已经激活`EVENT_VOICE_START` 开始上传VAD `EVENT_VOICE_NONE` 二次确认结果为空，只出于已经在激活状态下，直接说语音命令 `EVENT_VOICE_ACCEPT` 云端二次确认通过 `EVENT_VOICE_REJECT` 云端二次确认不通过 `EVENT_VOICE_CANCEL` 取消当前上传VAD `EVENT_VOICE_LOCAL_SLEEP` 通过休眠词从激活状态进入休眠状态 |
 
    * RecordClientManager 录音Pcm的Client Socket
 
-     | 类型 | 描述 |
-     | ---------------------------- | ----------------------------------------------------------- |
-     | `boolean` | `isUseQueue()`查看是否使用队列缓存数据发送 |
-     | `void` | `onDestroy()` |
-     | `void` | `sendRecordData(byte[] data)`发送录音数据 |
-     | `void` | `setUseQueue(boolean useQueue)`设置是否使用队列缓存数据发送 |
-     | `void` | `startSocket(java.lang.String ip, int port, ClientSocketManager.IConnnectListener listener)` 启动一个socket长连接|
+| 类型 | 描述 |
+| ---------------------------- | ----------------------------------------------------------- |
+| `boolean` | `isUseQueue()`查看是否使用队列缓存数据发送 |
+| `void` | `onDestroy()` |
+| `void` | `sendRecordData(byte[] data)`发送录音数据 |
+| `void` | `setUseQueue(boolean useQueue)`设置是否使用队列缓存数据发送 |
+| `void` | `startSocket(java.lang.String ip, int port, ClientSocketManager.IConnnectListener listener)` 启动一个socket长连接|
 
    * IRecordPcmReceiver 录音pcm数据获取后处理监听回调
 
-     | 类型 | 描述 |
-     | ---------------------------- | ----------------------------------------------------------- |
-     | `void` | `onPcmReceive(int length, byte[] data)`录音pcm数据获取后处理 |
+| 类型 | 描述 |
+| ---------------------------- | ----------------------------------------------------------- |
+| `void` | `onPcmReceive(int length, byte[] data)`录音pcm数据获取后处理 |
 
    * ClientSocketManager.IConnnectListener Socket连接监听
 
-     | 类型 | 描述 |
-     | ---------------------------- | ----------------------------------------------------------- |
-     | `void` | `onConnectFailed(ClientSocketManager socketManager)`连接失败 |
-     | `void` | `onConnectSuccess(ClientSocketManager socketManager)`连接成功 |
+| 类型 | 描述 |
+| ---------------------------- | ----------------------------------------------------------- |
+| `void` | `onConnectFailed(ClientSocketManager socketManager)`连接失败 |
+| `void` | `onConnectSuccess(ClientSocketManager socketManager)`连接成功 |
 
    * PcmClientManager 录音Pcm的Client Socket
 
-     | 类型 | 描述 |
-     | ---------------------------- | ----------------------------------------------------------- |
-     | `boolean` | `isUseQueue()`查看是否使用队列缓存数据发送 |
-     | `void` | `onDestroy()` |
-     | `void` | `sendRecordData(byte[] data)`发送录音数据 |
-     | `void` | `setUseQueue(boolean useQueue)`设置是否使用队列缓存数据发送 |
-     | `void` | `startSocket(ClientSocketManager.IConnnectListener listener, IReceiverPcmListener pcmReceiver)` 启动一个socket长连接 |
+| 类型 | 描述 |
+| ---------------------------- | ----------------------------------------------------------- |
+| `boolean` | `isUseQueue()`查看是否使用队列缓存数据发送 |
+| `void` | `onDestroy()` |
+| `void` | `sendRecordData(byte[] data)`发送录音数据 |
+| `void` | `setUseQueue(boolean useQueue)`设置是否使用队列缓存数据发送 |
+| `void` | `startSocket(ClientSocketManager.IConnnectListener listener, IReceiverPcmListener pcmReceiver)` 启动一个socket长连接 |
 
    * IReceiverPcmListener 算法pcm数据获取后处理监听回调
 
-     | 类型 | 描述 |
-     | ---------------------------- | ----------------------------------------------------------- |
-     | `void` | `onPcmReceive(int length, byte[] data)`算法pcm数据获取后处理|
+| 类型 | 描述 |
+| ---------------------------- | ----------------------------------------------------------- |
+| `void` | `onPcmReceive(int length, byte[] data)`算法pcm数据获取后处理|
    
 
 #### 使用说明：
