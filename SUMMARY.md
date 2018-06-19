@@ -32,6 +32,7 @@
             * [语音识别Speech](speechTTS/api_speech.md)
             * [语音合成TTS](speechTTS/api_tts.md)
         * [示例DEMO](https://github.com/Rokid/RokidSpeechTTSDemo)
+    * [Example4: Android 拾音算法+语音识别以aar形式集成](tutorials/example4/SDK集成开发指南.md)
 * Linux基础架构
      * [概述](/speechTTS/introduce.md)
      * [目录结构](/linuxsdk/sdk_linux_dir.md)
