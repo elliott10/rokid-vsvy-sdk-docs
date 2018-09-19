@@ -1,0 +1,1778 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Android APK级别aar类型全链路方案 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../tutorials/example3/intro.html" />
+    
+    
+    <link rel="prev" href="../fullLink/fulllink.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    智能设备语音接入平台
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../introduction.html">
+            
+                <a href="../../introduction.html">
+            
+                    
+                    平台简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    新手入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../rookie-guide/create-device.html">
+            
+                <a href="../../rookie-guide/create-device.html">
+            
+                    
+                    创建设备流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../rookie-guide/usage.html">
+            
+                <a href="../../rookie-guide/usage.html">
+            
+                    
+                    认证文件使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../important-concept.html">
+            
+                <a href="../../important-concept.html">
+            
+                    
+                    重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    语音方案介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../fullLink/fulllink.html">
+            
+                <a href="../fullLink/fulllink.html">
+            
+                    
+                    Android 系统级别全链路通用方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="RokidAiSdk.html">
+            
+                <a href="RokidAiSdk.html">
+            
+                    
+                    Android APK级别aar类型全链路方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../tutorials/example3/intro.html">
+            
+                <a href="../../tutorials/example3/intro.html">
+            
+                    
+                    Android 无需激活的语音识别集成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../speechTTS/introduce.html">
+            
+                <a href="../../speechTTS/introduce.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../speechTTS/sdk_dir.html">
+            
+                <a href="../../speechTTS/sdk_dir.html">
+            
+                    
+                    SDK目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../speechTTS/init.html">
+            
+                <a href="../../speechTTS/init.html">
+            
+                    
+                    集成
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.3.1" data-path="../../speechTTS/init_prepare.html">
+            
+                <a href="../../speechTTS/init_prepare.html">
+            
+                    
+                    集成前准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3.2" data-path="../../speechTTS/init_speech.html">
+            
+                <a href="../../speechTTS/init_speech.html">
+            
+                    
+                    语音识别Speech集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3.3" data-path="../../speechTTS/init_tts.html">
+            
+                <a href="../../speechTTS/init_tts.html">
+            
+                    
+                    语音合成TTS集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" >
+            
+                <span>
+            
+                    
+                    API调用说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.4.1" data-path="../../speechTTS/api_speech.html">
+            
+                <a href="../../speechTTS/api_speech.html">
+            
+                    
+                    语音识别Speech
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4.2" data-path="../../speechTTS/api_tts.html">
+            
+                <a href="../../speechTTS/api_tts.html">
+            
+                    
+                    语音合成TTS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" >
+            
+                <a target="_blank" href="https://github.com/Rokid/RokidSpeechTTSDemo">
+            
+                    
+                    示例DEMO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Linux基础架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../speechTTS/introduce.html">
+            
+                <a href="../../speechTTS/introduce.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../linuxsdk/sdk_linux_dir.html">
+            
+                <a href="../../linuxsdk/sdk_linux_dir.html">
+            
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    快速集成
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../linuxsdk/init_linux_prepare.html">
+            
+                <a href="../../linuxsdk/init_linux_prepare.html">
+            
+                    
+                    集成前准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../../linuxsdk/begin_integrate.html">
+            
+                <a href="../../linuxsdk/begin_integrate.html">
+            
+                    
+                    开始集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" >
+            
+                <span>
+            
+                    
+                    API 接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="../../linuxsdk/linux_tts_api.html">
+            
+                <a href="../../linuxsdk/linux_tts_api.html">
+            
+                    
+                    语音合成服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="../../linuxsdk/linux_speech_api.html">
+            
+                <a href="../../linuxsdk/linux_speech_api.html">
+            
+                    
+                    语音识别服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../common/err_code.html">
+            
+                <a href="../../common/err_code.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../common/api_json.html">
+            
+                <a href="../../common/api_json.html">
+            
+                    
+                    Json格式配置字串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Android APK级别aar类型全链路方案</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x76EE;&#x5F55;">&#x76EE;&#x5F55;</h2>
+<ul>
+<li><a href="#&#x4E00;&#x3001;&#x6982;&#x8FF0;">&#x4E00;&#x3001;&#x6982;&#x8FF0;</a></li>
+<li><a href="#&#x4E8C;&#x3001;&#x8F6F;&#x4EF6;&#x67B6;&#x6784;">&#x4E8C;&#x3001;&#x8F6F;&#x4EF6;&#x67B6;&#x6784;</a><ul>
+<li><a href="#1&#x3001;&#x6574;&#x4F53;&#x67B6;&#x6784;&#x56FE;">1&#x3001;&#x6574;&#x4F53;&#x67B6;&#x6784;&#x56FE;</a></li>
+<li><a href="#2&#x3001;&#x5404;&#x6A21;&#x5757;&#x8BF4;&#x660E;&#x56FE;">2&#x3001;&#x5404;&#x6A21;&#x5757;&#x8BF4;&#x660E;&#x56FE;</a></li>
+<li><a href="#3&#x3001;&#x4E3B;&#x8981;&#x8C03;&#x7528;&#x6D41;&#x7A0B;&#x56FE;">3&#x3001;&#x4E3B;&#x8981;&#x8C03;&#x7528;&#x6D41;&#x7A0B;&#x56FE;</a></li>
+</ul>
+</li>
+<li><a href="#&#x4E09;&#x3001;&#x96C6;&#x6210;&#x8BF4;&#x660E;">&#x4E09;&#x3001;&#x96C6;&#x6210;&#x8BF4;&#x660E;</a><ul>
+<li><a href="#&#x9700;&#x8981;&#x786C;&#x4EF6;&#x73AF;&#x5883;">&#x786C;&#x4EF6;&#x73AF;&#x5883;</a></li>
+<li><a href="#&#x6240;&#x9700;android&#x6743;&#x9650;">&#x6240;&#x9700;Android&#x6743;&#x9650;</a></li>
+<li><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li>
+<li><a href="#&#x5B9E;&#x73B0;&#x4EE3;&#x7801;">&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</a><ul>
+<li><a href="#1&#x3001;&#x4F7F;&#x7528;startservice&#x65B9;&#x5F0F;&#x542F;&#x52A8;">1&#x3001;&#x4F7F;&#x7528;StartService&#x65B9;&#x5F0F;&#x542F;&#x52A8;</a></li>
+<li><a href="#2&#x3001;&#x4F7F;&#x7528;bind&#x65B9;&#x5F0F;&#x542F;&#x52A8;">2&#x3001;&#x4F7F;&#x7528;bind&#x65B9;&#x5F0F;&#x542F;&#x52A8;</a></li>
+<li><a href="#3&#x3001;&#x4E0D;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;kenobi&#x6A21;&#x5757;&#xFF1A;&#x53EA;&#x5217;&#x51FA;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x4FEE;&#x6539;&#x533A;&#x5757;">3&#x3001;&#x4E0D;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;kenobi&#x6A21;&#x5757;</a></li>
+<li><a href="#4&#x3001;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x8FC7;&#x7684;pcm&#x6570;&#x636E;&#xFF1A;&#x53EA;&#x5217;&#x51FA;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x4FEE;&#x6539;&#x533A;&#x5757;">4&#x3001;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x8FC7;&#x7684;pcm&#x6570;&#x636E;</a></li>
+<li><a href="#5&#x3001;&#x4F7F;&#x7528;rokidaicloudapp&#x6765;&#x5904;&#x7406;nlp&#x53CA;&#x4E91;&#x7AEF;&#x6280;&#x80FD;">5&#x3001;&#x4F7F;&#x7528;RokidAiCloudApp.apk&#x6765;&#x5904;&#x7406;NLP&#x53CA;&#x4E91;&#x7AEF;&#x6280;&#x80FD;</a></li>
+<li><a href="#6&#x3001;&#x5355;&#x72EC;&#x7B97;&#x6CD5;&#x6A21;&#x5757;">6&#x3001;&#x5355;&#x72EC;&#x7B97;&#x6CD5;&#x6A21;&#x5757;</a></li>
+<li><a href="#7&#x3001;demo&#x4F7F;&#x7528;&#x8BF4;&#x660E;">7&#x3001;Demo&#x4F7F;&#x7528;&#x8BF4;&#x660E;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x56DB;&#x3001;&#x4E3B;&#x8981;api&#x53C2;&#x8003;">&#x56DB;&#x3001;&#x4E3B;&#x8981;API&#x53C2;&#x8003;</a></li>
+<li><a href="#&#x4E94;&#x3001;&#x5176;&#x4ED6;&#x8BF4;&#x660E;">&#x4E94;&#x3001;&#x5176;&#x4ED6;&#x8BF4;&#x660E;</a></li>
+</ul>
+<h3 id="&#x4E00;&#x3001;&#x6982;&#x8FF0;">&#x4E00;&#x3001;&#x6982;&#x8FF0;</h3>
+<p>RokidAiSdk&#x96C6;&#x5408;Kenobi&#x9879;&#x76EE;&#x7684;BTS&#x65B9;&#x6848;&#xFF0C;&#x7B97;&#x6CD5;&#x7AEF;Turen&#x76F8;&#x5173;&#x529F;&#x80FD;&#xFF0C;&#x901A;&#x8FC7;speech&#x3001;&#x4E91;&#x7AEF;&#x6765;&#x8FDB;&#x884C;&#x8BED;&#x97F3;&#x8BED;&#x4E49;&#x8BC6;&#x522B;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x4FE1;&#x606F;&#x7ED9;&#x4E09;&#x65B9;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x9644;&#x5E26;Rokid&#x7684;TTS&#x529F;&#x80FD;&#x3002;
+&#x9762;&#x5411;Android &#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;, &#x63D0;&#x4F9B;aar&#x5F62;&#x5F0F;&#x7684;SDK&#xFF0C;&#x7B80;&#x5316;&#x63A5;&#x5165;&#x6D41;&#x7A0B;&#xFF0C;&#x9002;&#x5E94;&#x5355;&#x72EC;apk&#x5F62;&#x5F0F;&#x7684;&#x96C6;&#x6210;&#xFF0C;&#x66F4;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x63A5;&#x5165;Rokid AI&#x8BED;&#x97F3;&#x6280;&#x672F;&#x3002;</p>
+<h3 id="&#x4E8C;&#x3001;&#x8F6F;&#x4EF6;&#x67B6;&#x6784;">&#x4E8C;&#x3001;&#x8F6F;&#x4EF6;&#x67B6;&#x6784;</h3>
+<h4 id="1&#x3001;&#x6574;&#x4F53;&#x67B6;&#x6784;&#x56FE;">1&#x3001;&#x6574;&#x4F53;&#x67B6;&#x6784;&#x56FE;</h4>
+<p>   <img src="image/AudioAiSdk &#x9879;&#x76EE;&#x67B6;&#x6784;.png" alt="Tv&#x9879;&#x76EE;&#x67B6;&#x6784;"></p>
+<h4 id="2&#x3001;&#x5404;&#x6A21;&#x5757;&#x8BF4;&#x660E;&#x56FE;">2&#x3001;&#x5404;&#x6A21;&#x5757;&#x8BF4;&#x660E;&#x56FE;</h4>
+<ul>
+<li>&#x4E3B;AiService&#x6A21;&#x5757;<ul>
+<li>&#x4E3B;&#x8981;&#x8868;&#x73B0;&#x5F62;&#x6001;&#x4E3A;Android&#x7684;Service&#x548C;Aidl Binder</li>
+<li>&#x7528;IRokidAudioAiServer.aild&#x6765;&#x627F;&#x63A5;Activity&#x7AEF;&#x5404;&#x79CD;&#x63A7;&#x5236;&#x9700;&#x6C42;&#xFF0C;&#x7528;IRokidAudioAiListener.aidl&#x6765;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x901A;&#x77E5;&#x56DE;&#x8C03;&#x3002;</li>
+<li>&#x652F;&#x6301;startService&#x548C;bind&#x4E24;&#x79CD;&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;ServiceConfig&#x4E2D;&#x9644;&#x52A0;&#x63A7;&#x5236;&#x53C2;&#x6570;&#x3002;</li>
+<li>Service&#x8FD0;&#x884C;&#x5728;&#x72EC;&#x7ACB;&#x8FDB;&#x7A0B;&#xFF0C;&#x670D;&#x52A1;&#x4E0E;app&#x5B9E;&#x73B0;1&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x3002;</li>
+</ul>
+</li>
+<li>RokidAFEProxy &#x7B97;&#x6CD5;&#x4E2D;&#x5FC3;&#x6A21;&#x5757;<ul>
+<li>&#x5305;&#x542B;NotifyMsgManager&#x6D88;&#x606F;&#x4E2D;&#x5FC3;&#xFF0C;&#x5B8C;&#x6210;&#x6570;&#x636E;1&#x5BF9;n&#x5F62;&#x5F0F;&#x5206;&#x53D1;&#x3002;</li>
+<li>&#x8FDE;&#x63A5;turen&#x8FDB;&#x7A0B;&#x7684;VoiceRecognize&#x5B9E;&#x73B0;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;apk&#x7EA7;&#x81EA;&#x6709;turen&#x8FDB;&#x7A0B;&#x8FDE;&#x63A5;&#xFF0C;&#x540C;&#x65F6;&#x652F;&#x6301;&#x7CFB;&#x7EDF;&#x7EA7;&#x522B;&#x7684;turen&#x8FDB;&#x7A0B;&#x8FDE;&#x63A5;&#x3002;</li>
+<li>&#x5B9E;&#x73B0;Turen-Speech-&#x4E91;&#x7AEF; &#x6570;&#x636E;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x63A5;&#x6536;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x7528;&#x6D88;&#x606F;&#x4E2D;&#x5FC3;&#x5411;&#x76D1;&#x542C;&#x8005;&#x5206;&#x53D1;&#x3002;</li>
+<li>&#x5B9E;&#x73B0;&#x7B97;&#x6CD5;&#x4E2D;&#x5FC3;&#x6240;&#x6709;&#x6D41;&#x7A0B;&#x4E8B;&#x4EF6;&#x629B;&#x51FA;&#xFF0C;&#x5E76;&#x901A;&#x77E5;&#x5176;&#x76D1;&#x542C;&#x8005;&#x3002;</li>
+<li>binder&#x6865;&#x63A5;&#x5BF9;turen&#x8FDB;&#x7A0B;&#x7684;&#x63A7;&#x5236;&#x65B9;&#x6CD5;&#x3002;</li>
+</ul>
+</li>
+<li><p>NlpConsumer NLP&#x8F6C;&#x53D1;&#x5904;&#x7406;&#x6A21;&#x5757;</p>
+<ul>
+<li>&#x5305;&#x542B;Consumer&#x5904;&#x7406;&#x7C7B;&#xFF0C;&#x5B8C;&#x6210;NLP&#x5206;&#x53D1;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;Service&#x6216;Activity&#x3002;</li>
+<li>&#x63D0;&#x4F9B;ServerSocket&#x548C;ClientSocket&#x57FA;&#x7840;SDK&#xFF0C;&#x672A;&#x975E;kenobi&#x7528;&#x6CD5;&#x63D0;&#x4F9B;pcm&#x6570;&#x636E;&#x8DE8;&#x8FDB;&#x7A0B;&#x63D0;&#x4F9B;&#x80FD;&#x529B;&#x3002;</li>
+<li>&#x63D0;&#x4F9B;Turen Pcm&#x6570;&#x636E;&#x6536;&#x96C6;&#x5668;&#xFF0C;&#x7528;socket&#x5F62;&#x5F0F;&#x4E0D;&#x65AD;&#x6536;&#x96C6;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x540E;&#x7684;pcm&#x6570;&#x636E;&#x3002;</li>
+<li>&#x63D0;&#x4F9B;&#x5E7F;&#x64AD;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x4E0E;RokidAiCloudApp&#x4EA4;&#x4E92;&#xFF0C;&#x5B8C;&#x6210;&#x4E3B;&#x52A8;&#x62FE;&#x97F3;&#x3001;&#x66F4;&#x65B0;&#x534F;&#x8BAE;&#x6808;&#x7B49;&#x529F;&#x80FD;&#x3002;</li>
+<li>&#x63D0;&#x4F9B;&#x4E00;&#x5957;NLP&#x62E6;&#x622A;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x62E6;&#x51FB;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;NLP&#x5904;&#x7406;&#x3002;</li>
+</ul>
+</li>
+<li><p>Turen&#x8FDB;&#x7A0B;&#x6A21;&#x5757;</p>
+<ul>
+<li>&#x5305;&#x542B;aisdk_jni&#x7684;&#x5177;&#x4F53;&#x8C03;&#x7528;&#xFF0C;&#x72EC;&#x7ACB;&#x7684;apk&#x7EA7;&#x522B;turen so&#x76F8;&#x5173;&#x8FDB;&#x7A0B;&#xFF0C;&#x548C;&#x7CFB;&#x7EDF;&#x7EA7;&#x522B;&#x7684;turenproc&#x529F;&#x80FD;&#x76F8;&#x540C;&#x3002;</li>
+<li>&#x5B9E;&#x73B0;turen&#x542F;&#x52A8;&#xFF0C;&#x63A7;&#x5236;&#x76F8;&#x5173;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x6240;&#x6709;&#x6D41;&#x7A0B;&#x4E8B;&#x4EF6;&#x629B;&#x51FA;&#xFF0C;&#x5E76;&#x901A;&#x77E5;&#x5176;&#x76D1;&#x542C;&#x8005;&#x3002;</li>
+<li>&#x914D;&#x5408;RokidAFEProxy &#x7B97;&#x6CD5;&#x4E2D;&#x5FC3;&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x529F;&#x80FD;&#x3002;</li>
+<li>&#x5B9E;&#x73B0;turen &#x6240;&#x9700;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x81EA;&#x52A8;copy&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+</li>
+<li><p>RokidAudioPreProcess &#x8BED;&#x97F3;&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;&#x4E2D;&#x5FC3;&#x6A21;&#x5757;</p>
+<ul>
+<li>&#x4F7F;&#x7528;Android AudioRecord&#x5F55;&#x97F3;&#x5E76;&#x8F93;&#x51FA;&#x76F8;&#x5173;pcm&#x6570;&#x636E;&#x3002;</li>
+<li>&#x6865;&#x63A5;libaudio_decoder.so&#xFF0C;&#x5B9E;&#x73B0;pcm&#x539F;&#x59CB;&#x6570;&#x636E;&#x4F18;&#x5316;&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;AudioManager&#x914D;&#x5408;&#x58F0;&#x97F3;&#x97F3;&#x91CF;&#x7BA1;&#x7406;&#xFF0C;&#x4F18;&#x5316;&#x6570;&#x636E;&#x6536;&#x96C6;&#x3002;</li>
+<li>&#x5C06;&#x4F18;&#x5316;&#x8FC7;&#x540E;&#x7684;pcm&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x7B97;&#x6CD5;&#x4E2D;&#x5FC3;&#x505A;&#x4E0B;&#x4E00;&#x6B65;&#x5904;&#x7406;&#x3002;</li>
+</ul>
+</li>
+<li><p>Socket &#x6570;&#x636E;&#x53D1;&#x9001;&#xFF08;&#x975E;Kenobi &#xFF09;</p>
+<ul>
+<li>&#x4F7F;&#x7528;ServerSocket&#x548C;ClientSocket&#x65B9;&#x5F0F;&#x5411;turen &#x4F20;&#x9012;pcm&#x6570;&#x636E;&#x3002;</li>
+<li>ServerSocket&#x8FD0;&#x884C;&#x5728;sdk&#x8FDB;&#x7A0B;&#xFF0C;ClientSocket&#x8FD0;&#x884C;&#x5728;&#x7528;&#x6237;appdemo&#x8FDB;&#x7A0B;&#x3002;</li>
+<li>&#x9644;&#x5E26;&#x5FC3;&#x8DF3;&#x673A;&#x5236;&#xFF0C;&#x81EA;&#x52A8;&#x91CD;&#x8FDE;&#x673A;&#x5236;&#x3002;</li>
+</ul>
+</li>
+<li>TTS&#x4E2D;&#x5FC3;<ul>
+<li>&#x7B80;&#x5355;TTS&#x8BED;&#x97F3;&#x529F;&#x80FD;</li>
+</ul>
+</li>
+<li>&#x4E0A;&#x5C42;AppDemo<ul>
+<li>&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x7ED3;&#x679C;&#x53CA;&#x76F8;&#x5173;&#x4E2D;&#x95F4;&#x4E8B;&#x4EF6;&#x7684;UI&#x5C55;&#x793A;</li>
+<li>&#x5B9E;&#x73B0;&#x64AD;&#x653E;/&#x505C;&#x6B62;&#x97F3;&#x4E50;&#x529F;&#x80FD;</li>
+<li>&#x5B9E;&#x73B0;&#x64AD;&#x653E;TTS&#x529F;&#x80FD;</li>
+<li>&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x4E0E;&#x7EDF;&#x8BA1;</li>
+<li>&#x5B9E;&#x73B0;AiService&#x8C03;&#x7528;&#x6D41;&#x7A0B;</li>
+</ul>
+</li>
+</ul>
+<h4 id="3&#x3001;&#x4E3B;&#x8981;&#x8C03;&#x7528;&#x6D41;&#x7A0B;&#x56FE;">3&#x3001;&#x4E3B;&#x8981;&#x8C03;&#x7528;&#x6D41;&#x7A0B;&#x56FE;</h4>
+<p>   <img src="image/AudioAiSdk &#x65F6;&#x5E8F;.png" alt="AudioAiSdk &#x65F6;&#x5E8F;"></p>
+<h3 id="&#x4E09;&#x3001;&#x96C6;&#x6210;&#x8BF4;&#x660E;">&#x4E09;&#x3001;&#x96C6;&#x6210;&#x8BF4;&#x660E;</h3>
+<h4 id="&#x9700;&#x8981;&#x786C;&#x4EF6;&#x73AF;&#x5883;">&#x9700;&#x8981;&#x786C;&#x4EF6;&#x73AF;&#x5883;</h4>
+<ol>
+<li>Kenobi<ul>
+<li>Android &#x7CFB;&#x7EDF;&#x7535;&#x89C6;&#x4E00;&#x53F0;</li>
+<li>Kenobi &#x5355;&#x7247;&#x673A;&#x53CA;&#x76F8;&#x5173;USB&#x7EBF;&#xFF08;Rokid&#x63D0;&#x4F9B;&#xFF09;</li>
+</ul>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x65B9;&#x6848;</p>
+<ul>
+<li>&#x5E26;&#x9EA6;&#x514B;&#x98CE;&#x7684;Android &#x7CFB;&#x7EDF;&#x673A;&#x5668;&#x4E00;&#x53F0;</li>
+<li>&#x5BF9;&#x5E94;&#x7684;&#x9EA6;&#x514B;&#x98CE;&#x914D;&#x7F6E;</li>
+</ul>
+<p>&#x5982;&#x9700;&#x52A8;&#x6001;&#x66FF;&#x6362;turen&#x7684;so&#xFF0C;&#x9700;&#x8981;&#x6B64;&#x8BBE;&#x5907;&#x62E5;&#x6709;root&#x6743;&#x9650;</p>
+</li>
+</ol>
+<h4 id="&#x6240;&#x9700;android&#x6743;&#x9650;">&#x6240;&#x9700;Android&#x6743;&#x9650;</h4>
+<pre><code>&lt;!-- &#x7F51;&#x7EDC; --&gt;
+&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+&lt;!-- &#x5F55;&#x97F3; --&gt;
+&lt;uses-permission android:name=&quot;android.permission.RECORD_AUDIO&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.MODIFY_AUDIO_SETTINGS&quot; /&gt;
+&lt;!-- &#x8BFB;&#x53D6;SD&#x5361; --&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<pre><code>&#x5BF9;&#x5916;&#x63A5;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x9644;&#x5E26;BSP&#x6A21;&#x5757;&#xFF0C;Service&#x670D;&#x52A1;&#x5728;com.rokid.ai.audioai&#x5355;&#x72EC;&#x8FDB;&#x7A0B;&#x4E2D;
+</code></pre><ul>
+<li><p>&#x5F15;&#x5165;aar</p>
+<ul>
+<li>&#x50CF;&#x5F15;&#x5165;jar&#x5305;&#x4E00;&#x6837;&#x5F15;&#x5165;aar&#x6587;&#x4EF6; </li>
+<li>gradle&#x914D;&#x7F6E;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-groovy"><span class="hljs-comment">// eg: aar </span>
+<span class="hljs-comment">// rokid_aisdk &#x547D;&#x540D;&#x4E3A;rokid_aisdk_1.2.7.aar</span>
+<span class="hljs-comment">// rokid_nlp_consumer &#x547D;&#x540D;&#x4E3A;rokid_nlp_consumer_release_1.0.aar</span>
+<span class="hljs-comment">// &#x628A; libs &#x76EE;&#x5F55;&#x52A0;&#x5165;&#x4F9D;&#x8D56;&#xFF1A;</span>
+repositories {
+    flatDir {
+        dirs <span class="hljs-string">&apos;libs&apos;</span>
+    }
+}
+
+dependencies {
+    implementation fileTree(<span class="hljs-string">include:</span> [<span class="hljs-string">&apos;*.jar&apos;</span>], <span class="hljs-string">dir:</span> <span class="hljs-string">&apos;libs&apos;</span>)
+    implementation(<span class="hljs-string">name:</span> <span class="hljs-string">&apos;rokid_aisdk_1.2.7&apos;</span>, <span class="hljs-string">ext:</span> <span class="hljs-string">&apos;aar&apos;</span>)
+    api (<span class="hljs-string">name:</span><span class="hljs-string">&apos;rokid_nlp_consumer_release_1.0&apos;</span>, <span class="hljs-string">ext:</span><span class="hljs-string">&apos;aar&apos;</span>)
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;">&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h4>
+<h5 id="1&#x3001;&#x4F7F;&#x7528;startservice&#x65B9;&#x5F0F;&#x542F;&#x52A8;">1&#x3001;&#x4F7F;&#x7528;startService&#x65B9;&#x5F0F;&#x542F;&#x52A8;</h5>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x521B;&#x5EFA;IRokidAudioAiService&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">private</span> IRokidAudioAiService mAudioAiService;
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;Android 6.0&#x4EE5;&#x4E0A;&#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x5355;&#x72EC;&#x7533;&#x8BF7;Android&#x6743;&#x9650;&#x5E76;&#x7528;&#x6237;&#x901A;&#x8FC7;</span>
+    requestPermission();
+    <span class="hljs-comment">// &#x5F00;&#x59CB;&#x7ED1;&#x5B9A;AudioAiService (sdk&#x5728;&#x72EC;&#x7ACB;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;)</span>
+    Intent mServiceIntent = AudioAiConfig.getIndependentIntent(<span class="hljs-keyword">this</span>);
+    mServiceIntent.putExtra(AudioAiConfig.PARAM_SERVICE_START_CONFIG, getServiceConfig());
+    startService(mServiceIntent);
+    <span class="hljs-comment">// SDK&#x548C;app&#x5728;&#x76F8;&#x540C;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;</span>
+    <span class="hljs-comment">// Intent mServiceIntent = AudioAiConfig.getAttachmentIntent(this);</span>
+    <span class="hljs-comment">// &#x9700;&#x8981;&#x540C;&#x8FC7;binder&#x6765;&#x64CD;&#x4F5C;Service&#x548C;&#x8BBE;&#x7F6E;&#x76D1;&#x542C;</span>
+    bindService(mServiceIntent, mAiServiceConnection, BIND_AUTO_CREATE);
+}
+
+<span class="hljs-comment">// &#x521B;&#x5EFA;ServiceConnection&#xFF0C;&#x7528;&#x6765;&#x8FDE;&#x63A5;AudioAiService</span>
+<span class="hljs-keyword">private</span> ServiceConnection mAiServiceConnection = <span class="hljs-keyword">new</span> ServiceConnection() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceConnected</span><span class="hljs-params">(ComponentName name, IBinder service)</span> </span>{
+        <span class="hljs-keyword">if</span> (service != <span class="hljs-keyword">null</span>) {
+            mAudioAiService = IRokidAudioAiService.Stub.asInterface(service);
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-comment">// *** &#x6CE8;&#x518C;&#x76D1;&#x542C;</span>
+                mAudioAiService.registAudioAiListener(mAudioAiListener);
+            } <span class="hljs-keyword">catch</span> (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceDisconnected</span><span class="hljs-params">(ComponentName name)</span> </span>{
+        mAudioAiService = <span class="hljs-keyword">null</span>;
+    }
+};
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x53C2;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> ServerConfig <span class="hljs-title">getServiceConfig</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &quot;workdir_asr_cn&quot;: &#x7B97;&#x6CD5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;assets&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-comment">// &quot;kenobi&quot;: &#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#xFF0C;kenobi&#x4E13;&#x7528; eg: device.kenobi.cfg -&gt; &quot;kenobi&quot;</span>
+    <span class="hljs-comment">// useOtherAudio: &#x662F;&#x5426;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;audio&#x6570;&#x636E;&#x6A21;&#x5757;</span>
+    ServerConfig config = <span class="hljs-keyword">new</span> ServerConfig(<span class="hljs-string">&quot;workdir_asr_cn&quot;</span>, <span class="hljs-string">&quot;kenobi&quot;</span>, <span class="hljs-keyword">false</span>);
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</span>
+    config.setLogConfig(Logger.LEVEL_D, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">true</span>);
+    <span class="hljs-comment">// key: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Key</span>
+    String key = <span class="hljs-string">&quot;BBF450D04CC14DBD88E960CF5D4DD697&quot;</span>;
+    <span class="hljs-comment">// secret: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Secret</span>
+    String secret = <span class="hljs-string">&quot;29F84556B84441FC885300CD6A85CA70&quot;</span>;
+    <span class="hljs-comment">// deviceTypeId: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;DeviceTypeId</span>
+    String deviceTypeId = <span class="hljs-string">&quot;3301A6600C6D44ADA27A5E58F5838E02&quot;</span>;
+    <span class="hljs-comment">// deviceId: &#x8BBE;&#x5907;SN&#x53F7;&#xFF0C;&#x7531;6~15&#x4F4D;&#x7684;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#xFF0C;&#x4E0D;&#x80FD;&#x542B;&#x6709;&#x7A7A;&#x683C;&#x548C;&#x7279;&#x6B8A;&#x7B26;&#x53F7;</span>
+    String deviceId = <span class="hljs-string">&quot;57E741770A1241CP&quot;</span>;
+
+    config.setKey(key).setSecret(secret)
+        .setDeviceTypeId(deviceTypeId).setDeviceId(deviceId);
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x8BED;&#x97F3;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x5904;&#x7406;NLP&#x6280;&#x80FD;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x5408;RokidAiCloudApp.apk</span>
+    config.setUseNlpConsumer(<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">return</span> config;
+}
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;IRokidAudioAiListener&#x76D1;&#x542C;&#xFF0C;&#x6765;&#x63A5;&#x6536;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">private</span> IRokidAudioAiListener mAudioAiListener = <span class="hljs-keyword">new</span> IRokidAudioAiListener.Stub() {...}
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &#x89E3;&#x7ED1;AudioAiService&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x6570;&#x4E3A;0&#xFF0C;&#x5219;AudioAiService&#x53CA;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x8FDB;&#x7A0B;&#x4F1A;&#x81EA;&#x52A8;&#x9500;&#x6BC1;</span>
+    unbindService(mAiServiceConnection);
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x975E;&#x5E38;&#x9A7B;&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#xFF0C;&#x5728;destory&#x65F6;&#x9700;&#x8981;stop&#x6389;Service</span>
+        stopService(mServiceIntent);
+    } <span class="hljs-keyword">catch</span> (Throwable e) {
+        e.printStackTrace();
+    }
+    <span class="hljs-keyword">super</span>.onDestroy();
+}
+
+<span class="hljs-comment">// &#x7528;&#x6237;&#x5728;&#x64AD;&#x653E;&#x5A92;&#x4F53;&#x58F0;&#x97F3;&#x65F6;&#x8C03;&#x7528;&#xFF0C;&#x65B9;&#x4FBF;SDK&#x4F18;&#x5316;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x5916;&#x90E8;&#x58F0;&#x97F3;&#x5E72;&#x6270;</span>
+<span class="hljs-keyword">if</span> (mAudioAiService != <span class="hljs-keyword">null</span>) {
+    mAudioAiService.setUserMediaPlaying(<span class="hljs-keyword">true</span>);
+}
+
+<span class="hljs-comment">// &#x7528;&#x6237;&#x5728;&#x505C;&#x6B62;&#x64AD;&#x653E;&#x5A92;&#x4F53;&#x58F0;&#x97F3;&#x65F6;&#x8C03;&#x7528;&#xFF0C;&#x65B9;&#x4FBF;SDK&#x4F18;&#x5316;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x5916;&#x90E8;&#x58F0;&#x97F3;&#x5E72;&#x6270;</span>
+<span class="hljs-keyword">if</span> (mAudioAiService != <span class="hljs-keyword">null</span>) {
+    mAudioAiService.setUserMediaPlaying(<span class="hljs-keyword">true</span>);
+}
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;TTS&#x529F;&#x80FD;</span>
+<span class="hljs-keyword">if</span> (mAudioAiService != <span class="hljs-keyword">null</span>) {
+    mAudioAiService.playTtsVoice(<span class="hljs-string">&quot;&#x5927;&#x5BB6;&#x597D;&#xFF0C;&#x6211;&#x662F;&#x7535;&#x89C6;&#x5C0F;&#x7CBE;&#x7075;&#xFF0C;&#x82E5;&#x742A;&#xFF01;&quot;</span>);
+}
+</code></pre>
+<h5 id="2&#x3001;&#x4F7F;&#x7528;bind&#x65B9;&#x5F0F;&#x542F;&#x52A8;">2&#x3001;&#x4F7F;&#x7528;bind&#x65B9;&#x5F0F;&#x542F;&#x52A8;</h5>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x521B;&#x5EFA;IRokidAudioAiService&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">private</span> IRokidAudioAiService mAudioAiService;
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;Android 6.0&#x4EE5;&#x4E0A;&#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x5355;&#x72EC;&#x7533;&#x8BF7;Android&#x6743;&#x9650;&#x5E76;&#x7528;&#x6237;&#x901A;&#x8FC7;</span>
+    requestPermission();
+    <span class="hljs-comment">// &#x5F00;&#x59CB;&#x7ED1;&#x5B9A;AudioAiService (sdk&#x5728;&#x72EC;&#x7ACB;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;)</span>
+    Intent mServiceIntent = AudioAiConfig.getIndependentIntent(<span class="hljs-keyword">this</span>);
+    <span class="hljs-comment">// SDK&#x548C;app&#x5728;&#x76F8;&#x540C;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;</span>
+    <span class="hljs-comment">// Intent mServiceIntent = AudioAiConfig.getAttachmentIntent(this);</span>
+    bindService(mServiceIntent, mAiServiceConnection, BIND_AUTO_CREATE);
+}
+
+<span class="hljs-comment">// &#x521B;&#x5EFA;ServiceConnection&#xFF0C;&#x7528;&#x6765;&#x8FDE;&#x63A5;AudioAiService</span>
+<span class="hljs-keyword">private</span> ServiceConnection mAiServiceConnection = <span class="hljs-keyword">new</span> ServiceConnection() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceConnected</span><span class="hljs-params">(ComponentName name, IBinder service)</span> </span>{
+        <span class="hljs-keyword">if</span> (service != <span class="hljs-keyword">null</span>) {
+            mAudioAiService = IRokidAudioAiService.Stub.asInterface(service);
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-comment">// *** &#x542F;&#x52A8;&#x670D;&#x52A1;</span>
+                mAudioAiService.srartAudioAiServer(getServiceConfig(), mAudioAiListener);
+            } <span class="hljs-keyword">catch</span> (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceDisconnected</span><span class="hljs-params">(ComponentName name)</span> </span>{
+        mAudioAiService = <span class="hljs-keyword">null</span>;
+    }
+};
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x53C2;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> ServerConfig <span class="hljs-title">getServiceConfig</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &quot;workdir_asr_cn&quot;: &#x7B97;&#x6CD5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;assets&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-comment">// &quot;kenobi&quot;: &#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#xFF0C;kenobi&#x4E13;&#x7528; eg: device.kenobi.cfg -&gt; &quot;kenobi&quot;</span>
+    <span class="hljs-comment">// useOtherAudio: &#x662F;&#x5426;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;audio&#x6570;&#x636E;&#x6A21;&#x5757;</span>
+    ServerConfig config = <span class="hljs-keyword">new</span> ServerConfig(<span class="hljs-string">&quot;workdir_asr_cn&quot;</span>, <span class="hljs-string">&quot;kenobi&quot;</span>, <span class="hljs-keyword">false</span>);
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</span>
+    config.setLogConfig(Logger.LEVEL_D, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">true</span>);
+    <span class="hljs-comment">// key: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Key</span>
+    String key = <span class="hljs-string">&quot;BBF450D04CC14DBD88E960CF5D4DD697&quot;</span>;
+    <span class="hljs-comment">// secret: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Secret</span>
+    String secret = <span class="hljs-string">&quot;29F84556B84441FC885300CD6A85CA70&quot;</span>;
+    <span class="hljs-comment">// deviceTypeId: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;DeviceTypeId</span>
+    String deviceTypeId = <span class="hljs-string">&quot;3301A6600C6D44ADA27A5E58F5838E02&quot;</span>;
+    <span class="hljs-comment">// deviceId: &#x8BBE;&#x5907;SN&#x53F7;&#xFF0C;&#x7531;6~15&#x4F4D;&#x7684;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#xFF0C;&#x4E0D;&#x80FD;&#x542B;&#x6709;&#x7A7A;&#x683C;&#x548C;&#x7279;&#x6B8A;&#x7B26;&#x53F7;</span>
+    String deviceId = <span class="hljs-string">&quot;57E741770A1241CP&quot;</span>;
+
+    config.setKey(key).setSecret(secret)
+        .setDeviceTypeId(deviceTypeId).setDeviceId(deviceId);
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x8BED;&#x97F3;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x5904;&#x7406;NLP&#x6280;&#x80FD;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x5408;RokidAiCloudApp.apk</span>
+    config.setUseNlpConsumer(<span class="hljs-keyword">true</span>);
+    <span class="hljs-keyword">return</span> config;
+}
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;IRokidAudioAiListener&#x76D1;&#x542C;&#xFF0C;&#x6765;&#x63A5;&#x6536;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">private</span> IRokidAudioAiListener mAudioAiListener = <span class="hljs-keyword">new</span> IRokidAudioAiListener.Stub() {...}
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &#x89E3;&#x7ED1;AudioAiService&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x6570;&#x4E3A;0&#xFF0C;&#x5219;AudioAiService&#x53CA;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x8FDB;&#x7A0B;&#x4F1A;&#x81EA;&#x52A8;&#x9500;&#x6BC1;</span>
+    unbindService(mAiServiceConnection);
+
+    <span class="hljs-keyword">super</span>.onDestroy();
+}
+</code></pre>
+<h5 id="3&#x3001;&#x4E0D;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;kenobi&#x6A21;&#x5757;&#xFF1A;&#x53EA;&#x5217;&#x51FA;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x4FEE;&#x6539;&#x533A;&#x5757;">3&#x3001;&#x4E0D;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;kenobi&#x6A21;&#x5757;&#xFF1A;&#x53EA;&#x5217;&#x51FA;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x4FEE;&#x6539;&#x533A;&#x5757;</h5>
+<pre><code class="lang-java"><span class="hljs-keyword">private</span> RecordClientManager mRecordClientManager;
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    --- --- &#x540C;&#x4E0A;&#xFF1A;&#x7565; --- ---
+
+    mRecordClientManager = <span class="hljs-keyword">new</span> RecordClientManager();
+}
+
+<span class="hljs-comment">// &#x914D;&#x7F6E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x53C2;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> ServerConfig <span class="hljs-title">getServiceConfig</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// &quot;workdir_asr_cn&quot;: &#x7B97;&#x6CD5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;assets&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-comment">// &quot;phonetest&quot;: &#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;,&#x5355;&#x9EA6; eg: device.phonetest.cfg -&gt; &quot;phonetest&quot;</span>
+    <span class="hljs-comment">// useOtherAudio: &#x662F;&#x5426;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;audio&#x6570;&#x636E;&#x6A21;&#x5757;</span>
+    ServerConfig config = <span class="hljs-keyword">new</span> ServerConfig(<span class="hljs-string">&quot;workdir_asr_cn&quot;</span>, <span class="hljs-string">&quot;phonetest&quot;</span>, <span class="hljs-keyword">true</span>);
+
+    --- --- &#x540C;&#x4E0A;&#xFF1A;&#x7565; --- ---
+
+    <span class="hljs-keyword">return</span> config;
+}
+
+<span class="hljs-keyword">private</span> IRokidAudioAiListener mAudioAiListener = <span class="hljs-keyword">new</span> IRokidAudioAiListener.Stub() {
+
+    <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onIntermediateSlice</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String asr)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onIntermediateEntire</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String asr)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCompleteNlp</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String nlp, String action)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onVoiceEvent</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, <span class="hljs-keyword">int</span> event, <span class="hljs-keyword">float</span> sl, <span class="hljs-keyword">float</span> energy)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRecognizeError</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, <span class="hljs-keyword">int</span> errorCode)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServerSocketCreate</span><span class="hljs-params">(String ip, <span class="hljs-keyword">int</span> post)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{
+            <span class="hljs-keyword">if</span> (TextUtils.isEmpty(ip) || port &lt; <span class="hljs-number">1</span>) {
+                <span class="hljs-keyword">return</span>;
+            }
+            Logger.d(TAG,<span class="hljs-string">&quot;onServerSocketCreate(): ip = &quot;</span> + ip + <span class="hljs-string">&quot;, port = &quot;</span> + port);
+            <span class="hljs-comment">// SDK Server&#x7AEF;&#x6570;&#x636E;&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x542F;&#x52A8;ClientSocket&#x6765;&#x53D1;&#x9001;&#x6570;&#x636E;</span>
+            <span class="hljs-comment">// mConnnectListener&#xFF1A;socket&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x542C;</span>
+            <span class="hljs-comment">// ClientSocket&#x5E26;&#x81EA;&#x52A8;&#x91CD;&#x8FDE;&#x529F;&#x80FD;</span>
+            <span class="hljs-keyword">if</span> (mRecordClientManager != <span class="hljs-keyword">null</span>) {
+                mRecordClientManager.startSocket(ip, port, mConnnectListener);
+            }
+        }
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPcmServerPrepared</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getKey</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">controlNlpAppExit</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">interceptCloudNlpControl</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String nlp, String action)</span> <span class="hljs-keyword">throws</span> RemoteException </span>{...}
+};
+
+<span class="hljs-comment">// socket&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x76D1;&#x542C;</span>
+<span class="hljs-keyword">private</span> ClientSocketManager.IConnnectListener mConnnectListener = <span class="hljs-keyword">new</span> ClientSocketManager.IConnnectListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnectSuccess</span><span class="hljs-params">(ClientSocketManager socketManager)</span> </span>{
+        <span class="hljs-comment">// socket&#x8FDE;&#x63A5;&#x6210;&#x529F;</span>
+        mSocketConnect = <span class="hljs-keyword">true</span>;
+        Logger.d(TAG,<span class="hljs-string">&quot;IConnnectListener(): onConnectSuccess&quot;</span>);
+        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E2D;&#x7684;pcm&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x65AD;&#x53D1;&#x9001;&#x7ED9;SDK</span>
+                sendPcmData();
+            }
+        }).start();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnectFailed</span><span class="hljs-params">(ClientSocketManager socketManager)</span> </span>{
+        <span class="hljs-comment">// socket&#x8FDE;&#x63A5;&#x5931;&#x6548;</span>
+        mSocketConnect = <span class="hljs-keyword">false</span>;
+        Logger.d(TAG,<span class="hljs-string">&quot;IConnnectListener(): onConnectFailed&quot;</span>);
+    }
+};
+
+<span class="hljs-comment">/**
+    * &#x901A;&#x8FC7;Android AudioRecord &#x6765;&#x83B7;&#x53D6;pcm&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x65AD;&#x53D1;&#x9001;&#x7ED9;SDK 
+    * &#x9EA6;&#x514B;&#x98CE;&#x7C7B;&#x578B;&#x4E3A;&#x5355;&#x9EA6;&#xFF0C;&#x5355;&#x901A;&#x9053;&#xFF0C;16000&#x91C7;&#x6837;&#x7387;&#xFF0C;16bit&#x6570;&#x636E;
+    * &#x8FD9;&#x91CC;&#x53EA;&#x505A;&#x793A;&#x4F8B;&#xFF0C;&#x5177;&#x4F53;&#x8BF7;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;
+    */</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendPcmData</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> bufferSize = <span class="hljs-number">0</span>;
+    bufferSize = AudioRecord.getMinBufferSize(<span class="hljs-number">16000</span>, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT);
+    bufferSize = bufferSize * <span class="hljs-number">3</span>;
+
+    <span class="hljs-keyword">if</span>(mAudioRecord == <span class="hljs-keyword">null</span>) {
+        mAudioRecord = <span class="hljs-keyword">new</span> AudioRecord(MediaRecorder.AudioSource.MIC
+                , FREQUENCY
+                , CHANNEL
+                , ENCODING_BIT
+                , bufferSize);
+        isRecording = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[bufferSize];
+        mAudioRecord.startRecording();
+        Logger.d(TAG, <span class="hljs-string">&quot;$$$$$$$$$$ the pcm data is &quot;</span> + bufferSize);
+
+        <span class="hljs-keyword">int</span> bufferReadResult;
+        <span class="hljs-keyword">while</span> (isRecording) {
+            bufferReadResult = mAudioRecord.read(buffer, <span class="hljs-number">0</span>, bufferSize);
+            <span class="hljs-keyword">if</span> (mCanSendPcm) {
+<span class="hljs-comment">//                                Logger.d(TAG, &quot;sendRecordData data is&quot; + bufferSize);</span>
+                <span class="hljs-keyword">if</span> (mRecordClientManager != <span class="hljs-keyword">null</span>) {
+                    mRecordClientManager.sendRecordData(buffer);
+                }
+            }
+        }
+    }
+}
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> </span>{
+    --- --- &#x540C;&#x4E0A;&#xFF1A;&#x7565; --- ---
+
+    mRecordClientManager.onDestroy();
+    mRecordClientManager = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">super</span>.onDestroy();
+}
+</code></pre>
+<h5 id="4&#x3001;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x8FC7;&#x7684;pcm&#x6570;&#x636E;&#xFF1A;&#x53EA;&#x5217;&#x51FA;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x4FEE;&#x6539;&#x533A;&#x5757;">4&#x3001;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x8FC7;&#x7684;pcm&#x6570;&#x636E;&#xFF1A;&#x53EA;&#x5217;&#x51FA;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x4FEE;&#x6539;&#x533A;&#x5757;</h5>
+<p>   &#x914D;&#x7F6E;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code class="lang-shell"># workdir_asr_cn/ctc.xxx.cfg
+# &#x6253;&#x5F00;30003&#x3001;30010&#x7AEF;&#x53E3;&#xFF0C;&#x6253;&#x5F00;&#x7AEF;&#x53E3;&#x540E;cup&#x5360;&#x7528;&#x4F1A;&#x589E;&#x9AD8;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#xFF0C;&#x8BF7;&#x4E0D;&#x8981;&#x914D;&#x7F6E;
+...
+start.server=30003,30010
+...
+</code></pre>
+<p>   &#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">private</span> PcmClientManager mPcmSocketManager;
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+    ... ... &#x540C;&#x4E0A;&#xFF1A;&#x7565; ... ...
+
+    mPcmSocketManager = <span class="hljs-keyword">new</span> PcmClientManager();
+}
+
+<span class="hljs-keyword">private</span> IRokidAudioAiListener mAudioAiListener = <span class="hljs-keyword">new</span> IRokidAudioAiListener.Stub() {
+    ......
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPcmServerPrepared</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> RemoteException </span>{
+        Logger.d(TAG,<span class="hljs-string">&quot;onPcmServerPrepared(): called&quot;</span>);
+        <span class="hljs-keyword">if</span> (mPcmSocketManager != <span class="hljs-keyword">null</span>) {
+            mPcmSocketManager.startSocket(<span class="hljs-keyword">null</span>, mPcmReceiver, <span class="hljs-number">30003</span>);
+        }
+    }
+
+    ......
+};
+
+<span class="hljs-keyword">private</span> IReceiverPcmListener mPcmReceiver = <span class="hljs-keyword">new</span> IReceiverPcmListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPcmReceive</span><span class="hljs-params">(<span class="hljs-keyword">int</span> length, <span class="hljs-keyword">byte</span>[] data)</span> </span>{
+        String s = <span class="hljs-string">&quot;onPcmReceive(): len = &quot;</span> + length + <span class="hljs-string">&quot;\n\r&quot;</span>;
+        Logger.d(TAG, s);
+        <span class="hljs-comment">// showPcmData(length, data);</span>
+    }
+};
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> </span>{
+    ... ... &#x540C;&#x4E0A;&#xFF1A;&#x7565; ... ...
+
+    mRecordClientManager.onDestroy();
+    mRecordClientManager = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">super</span>.onDestroy();
+}
+</code></pre>
+<h5 id="5&#x3001;&#x4F7F;&#x7528;rokidaicloudapp&#x6765;&#x5904;&#x7406;nlp&#x53CA;&#x4E91;&#x7AEF;&#x6280;&#x80FD;">5&#x3001;&#x4F7F;&#x7528;RokidAiCloudApp&#x6765;&#x5904;&#x7406;NLP&#x53CA;&#x4E91;&#x7AEF;&#x6280;&#x80FD;</h5>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x9700;&#x8981;&#x5B89;&#x88C5;RokidAiCloudApp.apk</span>
+<span class="hljs-comment">// &#x5728;ServerConfig&#x4E2D;&#x6253;&#x5F00;NlpConsumer&#x5F00;&#x5173;</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> ServerConfig <span class="hljs-title">getServiceConfig</span><span class="hljs-params">(<span class="hljs-keyword">int</span> status)</span> </span>{
+
+    ServerConfig config = <span class="hljs-keyword">null</span>;
+    ...
+
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x8BED;&#x97F3;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x5904;&#x7406;NLP&#x6280;&#x80FD;</span>
+    config.setUseNlpConsumer(<span class="hljs-keyword">true</span>);
+
+    ...
+    <span class="hljs-keyword">return</span> config;
+}
+</code></pre>
+<h5 id="6&#x3001;&#x5355;&#x72EC;&#x7B97;&#x6CD5;&#x6A21;&#x5757;">6&#x3001;&#x5355;&#x72EC;&#x7B97;&#x6CD5;&#x6A21;&#x5757;</h5>
+<pre><code class="lang-java"><span class="hljs-comment">// 1. &#x521B;&#x5EFA;RokidAFEProxy&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</span>
+RokidAFEProxy mRokidAFEProxy = <span class="hljs-keyword">new</span> RokidAFEProxy(<span class="hljs-keyword">this</span>);
+
+<span class="hljs-comment">// 2. &#x8BBE;&#x7F6E;IRokidAudioAiListener&#x76D1;&#x542C;&#xFF0C;&#x6765;&#x63A5;&#x6536;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;</span>
+IRokidAudioAiListener mAudioAiListener = <span class="hljs-keyword">new</span> IRokidAudioAiListener.Stub() {...};
+ServerConfig config = <span class="hljs-keyword">new</span> ServerConfig(<span class="hljs-string">&quot;workdir_asr_cn&quot;</span>, <span class="hljs-string">&quot;phonetest&quot;</span>, <span class="hljs-keyword">false</span>);
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x914D;&#x7F6E;</span>
+config.setLogConfig(Logger.LEVEL_D, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">true</span>);
+mRokidAFEProxy.addResultListener(config, mAudioAiListener);
+
+<span class="hljs-comment">// 3. &#x914D;&#x7F6E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x53C2;&#x6570;</span>
+AfeParam param = <span class="hljs-keyword">new</span> AfeParam();
+<span class="hljs-comment">// key: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Key</span>
+param.key = <span class="hljs-string">&quot;BBF450D04CC14DBD88E960CF5D4DD697&quot;</span>;
+<span class="hljs-comment">// secret: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Secret</span>
+param.secret = <span class="hljs-string">&quot;29F84556B84441FC885300CD6A85CA70&quot;</span>;
+<span class="hljs-comment">// deviceTypeId: Rokid&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;DeviceTypeId</span>
+param.deviceTypeId = <span class="hljs-string">&quot;3301A6600C6D44ADA27A5E58F5838E02&quot;</span>;
+<span class="hljs-comment">// deviceId: &#x8BBE;&#x5907;SN&#x53F7;&#xFF0C;&#x7531;6~15&#x4F4D;&#x7684;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#xFF0C;&#x4E0D;&#x80FD;&#x542B;&#x6709;&#x7A7A;&#x683C;&#x548C;&#x7279;&#x6B8A;&#x7B26;&#x53F7;</span>
+param.deviceId = <span class="hljs-string">&quot;57E741770A1241CP&quot;</span>;
+
+<span class="hljs-comment">// 4. &#x5F00;&#x59CB;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x670D;&#x52A1;</span>
+mRokidAFEProxy.startAfeServer(param);
+
+<span class="hljs-comment">// **** &#x6B63;&#x786E;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#xFF0C;&#x6D4B;&#x8BD5;&#x65F6;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x8FD9;&#x79CD;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-keyword">int</span> count = mRokidAFEProxy.getAudioLengh(<span class="hljs-number">16000</span>, AudioFormat.ENCODING_PCM_16BIT, <span class="hljs-number">1</span>);
+<span class="hljs-comment">// 5. &#x5EF6;&#x8FDF;3~5&#x79D2;&#xFF0C;&#x5F85;Turen&#x670D;&#x52A1;&#x5B8C;&#x5168;&#x5F00;&#x542F;&#xFF0C;&#x5F00;&#x59CB;&#x5FAA;&#x73AF;&#x6CE8;&#x5165;&#x539F;&#x59CB;Pcm&#x6570;&#x636E;</span>
+mRokidAFEProxy.addPcmData(count, myte);
+
+<span class="hljs-comment">// 6. &#x7B97;&#x6CD5;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x4F1A;&#x901A;&#x8FC7;IRokidAudioAiListener&#x5185;&#x65B9;&#x6CD5;&#x56DE;&#x8C03;&#x8FD4;&#x56DE;</span>
+</code></pre>
+<h5 id="7&#x3001;demo&#x4F7F;&#x7528;&#x8BF4;&#x660E;">7&#x3001;Demo&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h5>
+<p>ApkDemo&#x56E0;&#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x5730;&#x70B9;&#x3001;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x4E0A;&#x6F14;&#x793A;&#xFF0C;&#x6240;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x52A8;&#x6001;&#x66FF;&#x6362;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x6216;&#x914D;&#x7F6E;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x8BE6;&#x89C1;&#xFF1A;</p>
+<p><a href="extra/SDK_Demo&#x4F7F;&#x7528;&#x6307;&#x5357;.md">SDK Demo&#x4F7F;&#x7528;&#x6307;&#x5357;.md</a></p>
+<h3 id="&#x56DB;&#x3001;&#x4E3B;&#x8981;api&#x53C2;&#x8003;">&#x56DB;&#x3001;&#x4E3B;&#x8981;API&#x53C2;&#x8003;</h3>
+<ul>
+<li>IRokidAudioAiService.java  ASR &#x4E3B;Service&#x7684;binder&#x63A5;&#x53E3;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD4;&#x56DE;&#x503C;</th>
+<th>&#x65B9;&#x6CD5;&#x548C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><code>playTtsVoice(java.lang.String text)</code>&#x7528;tts&#x670D;&#x52A1;&#x64AD;&#x653E;text&#x8BED;&#x97F3;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>setUserMediaPlaying(boolean userMediaPlaying)</code>&#x901A;&#x77E5;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x6709;&#x7528;&#x6237;&#x5A92;&#x4F53;&#x6D41;&#x5728;&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>srartAudioAiServer(ServerConfig config, IRokidAudioAiListener listener)</code>&#x6839;&#x636E;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x542F;&#x52A8;&#x670D;&#x52A1;, &#x5E76;&#x6CE8;&#x518C;Asr&#x8BED;&#x97F3;&#x670D;&#x52A1;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x7684;&#x76D1;&#x542C;&#xFF08;&#x82E5;&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5DF2;&#x542F;&#x52A8;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#xFF09;        true&#xFF1A;&#x8868;&#x793A;&#x76D1;&#x542C;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#xFF0C;false&#xFF1A;&#x8868;&#x793A;&#x76D1;&#x542C;&#x6DFB;&#x52A0;&#x5931;&#x8D25;&#xFF0C;config&#x4E2D;&#x7684;Key&#x3001;Secret&#x3001;DeviceTypeId&#x4E09;&#x4E2A;&#x503C;&#x4E0E;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x65F6;&#x7684;config&#x4E2D;&#x7684;&#x4E09;&#x4E2A;&#x503C;&#x4E0D;&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>unRegistAudioAiListener(IRokidAudioAiListener listener)</code>&#x6CE8;&#x9500;Asr&#x8BED;&#x97F3;&#x670D;&#x52A1;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x7684;&#x76D1;&#x542C;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>setAngle(int angle)</code> &#x8BBE;&#x7F6E;&#x9EA6;&#x514B;&#x98CE;&#x5BFB;&#x5411;&#x89D2;&#x5EA6; angle&#xFF08;0 ~ 360&#xFF09;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>setPickUp(boolean open)</code> &#x5728;&#x5355;&#x72EC;&#x7684;&#x6FC0;&#x6D3B;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x4E3B;&#x52A8;&#x5F00;&#x542F;&#x62FE;&#x97F3;&#x548C;&#x5173;&#x95ED;&#x62FE;&#x97F3; true: &#x5F00;&#x542F;&#x62FE;&#x97F3;, false: &#x7ED3;&#x675F;&#x62FE;&#x97F3;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>registAudioAiListener(IRokidAudioAiListener listener)</code> &#x6CE8;&#x518C;Asr&#x8BED;&#x97F3;&#x670D;&#x52A1;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x7684;&#x76D1;&#x542C;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>IRokidAudioAiListener.java &#x76D1;&#x542C;AudioAiService&#x670D;&#x52A1;&#x5BF9;&#x8BED;&#x97F3;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD4;&#x56DE;&#x503C;</th>
+<th>&#x65B9;&#x6CD5;&#x548C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>onIntermediateSlice(int id, String asr) &#x8FD4;&#x56DE;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x7247;&#x6BB5; (id: &#x672C;&#x6B21;&#x6FC0;&#x6D3B;&#x4F1A;&#x8BDD;id)</td>
+</tr>
+<tr>
+<td>void</td>
+<td>onIntermediateEntire(int id, String asr)  &#x8FD4;&#x56DE;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x5B8C;&#x6574;&#x7684;&#x6570;&#x636E;(id: &#x672C;&#x6B21;&#x6FC0;&#x6D3B;&#x4F1A;&#x8BDD;id)</td>
+</tr>
+<tr>
+<td>void</td>
+<td>onCompleteNlp(int id, String nlp, String action) &#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x7ED3;&#x679C;&#xFF08;id: &#x672C;&#x6B21;&#x6FC0;&#x6D3B;&#x4F1A;&#x8BDD;id&#xFF0C;nlp&#xFF1A;&#x81EA;&#x7136;&#x8BED;&#x4E49;&#x89E3;&#x6790;&#x7ED3;&#x679C;&#xFF0C; action&#xFF1A;&#x4E91;&#x7AEF;skill&#x7ED3;&#x679C;&#xFF09;</td>
+</tr>
+<tr>
+<td>void</td>
+<td>onVoiceEvent(int id, int event, float sl, float energy)  &#x8FD4;&#x56DE;&#x8BED;&#x97F3;&#x5524;&#x9192;&#x4E8B;&#x4EF6;&#xFF08;id: &#x672C;&#x6B21;&#x6FC0;&#x6D3B;&#x4F1A;&#x8BDD;id&#xFF0C;event: &#x8BED;&#x97F3;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;VoiceRecognize.Event&#x7684;ordinal()&#x503C;&#xFF08;&#x89C1;<strong>VoiceRecognize.Event  enum &#x7C7B;&#x578B;&#x8BF4;&#x660E;</strong>&#xFF09;&#xFF0C; sl&#xFF1A;&#x5F53;&#x524D;&#x5524;&#x9192;&#x89D2;&#x5EA6;(0&#x5230;360&#x5EA6;&#x4E4B;&#x95F4;)&#xFF0C; energy&#xFF1A;&#x5F53;&#x524D;&#x8BF4;&#x8BDD;&#x80FD;&#x91CF;&#x503C;(0&#x5230;1&#x4E4B;&#x95F4;&#x7684;&#x6D6E;&#x70B9;&#x6570;)&#xFF09;</td>
+</tr>
+<tr>
+<td>void</td>
+<td>onRecognizeError(int id, int errorCode)  &#x8FD4;&#x56DE;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x51FA;&#x9519;&#x4FE1;&#x606F;&#xFF08;id: &#x672C;&#x6B21;&#x6FC0;&#x6D3B;&#x4F1A;&#x8BDD;id&#xFF0C;errorCode&#xFF1A;&#x9519;&#x8BEF;&#x7801;&#xFF0C;<strong>&#x89C1;&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</strong>&#xFF09;</td>
+</tr>
+<tr>
+<td>void</td>
+<td>onServerSocketCreate(String ip, int port) &#x63A5;&#x6536;pcm&#x6570;&#x636E;&#x7684;socket&#x542F;&#x52A8;&#x6210;&#x529F;&#x65F6;&#x7684;&#x56DE;&#x8C03; &#xFF08;ip&#xFF1A;socket&#x7684;ip&#x5730;&#x5740;&#xFF0C; post&#xFF1A;socket&#x7684;&#x7AEF;&#x53E3;&#xFF09;</td>
+</tr>
+<tr>
+<td>void</td>
+<td>onPcmServerPrepared()  &#x53D1;&#x9001;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x8FC7;&#x540E;&#x7684;pcm&#x6570;&#x636E;&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;</td>
+</tr>
+<tr>
+<td>String</td>
+<td>getKey()  &#x8FD4;&#x56DE;&#x5F53;&#x524D;IRokidAudioAiListener &#x552F;&#x4E00;&#x6807;&#x5FD7; &#xFF08;&#x4E0D;&#x53EF;&#x4E3A;null&#x6216;&quot;&quot;&#xFF0C;&#x5426;&#x5219;IRokidAudioAiListener&#x5C06;&#x4F1A;&#x6CE8;&#x518C;&#x5931;&#x8D25;&#xFF09;</td>
+</tr>
+<tr>
+<td>void</td>
+<td>controlNlpAppExit()  &#x5904;&#x7406;NLP&#x4E2D;&#x7684;&#x9000;&#x51FA;&#x6240;&#x6709;app&#x6307;&#x4EE4;</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>interceptCloudNlpControl(int id, String nlp, String action)  &#x5BF9;NlpConsumer&#x4E91;&#x7AEF;&#x5904;&#x7406;NLP&#x8FDB;&#x884C;&#x62E6;&#x622A;&#xFF08;id&#xFF1A;&#x4F1A;&#x8BDD;ID&#xFF0C;nlp&#xFF1A;&#x81EA;&#x7136;&#x8BED;&#x4E49;&#x89E3;&#x6790;&#x7ED3;&#x679C;&#xFF0C; action&#xFF1A;&#x4E91;&#x7AEF;skill&#x7ED3;&#x679C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ServiceConfig.java &#x542F;&#x52A8;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x7C7B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD4;&#x56DE;&#x503C;</th>
+<th>&#x65B9;&#x6CD5;&#x548C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getAssetsConfigPath()</code>&#x83B7;&#x53D6;Assets&#x76EE;&#x5F55;&#x4E2D;&#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getCertificate()</code>&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x5BC6;&#x5319;</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getConfigFileName()</code>&#x83B7;&#x53D6;&#x521D;&#x59CB;&#x5316;turen&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getDeviceId()</code>&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x7684;DeviceId&#xFF0C; sn&#x53F7;</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getDeviceTypeId()</code>&#x83B7;&#x53D6;&#x5F53;&#x524D;DeviceTypeId</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getKey()</code>&#x83B7;&#x53D6;&#x5F53;&#x524D;Key</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>getLogLevel()</code>&#x8FD4;&#x56DE;log&#x7B49;&#x7EA7;</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getRealConfigPath()</code>&#x83B7;&#x53D6;&#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x771F;&#x5B9E;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getSecret()</code>&#x83B7;&#x53D6;&#x5F53;&#x524D;Secret</td>
+</tr>
+<tr>
+<td><code>java.lang.String</code></td>
+<td><code>getSpeechConfig()</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isIgnoreMoveConfig()</code>&#x83B7;&#x53D6;&#x662F;&#x5426;&#x5FFD;&#x7565;Turen&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#xFF0C;&#x7528;&#x4E8E;turen&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x6D4B;&#x8BD5;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isIgnoreSuppressAudioVolume()</code>&#x83B7;&#x53D6;&#x662F;&#x5426;&#x5FFD;&#x7565;&#x58F0;&#x97F3;&#x538B;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;BSP&#x6A21;&#x5757;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isMustInit()</code>&#x662F;&#x5426;&#x5F3A;&#x5236;&#x521D;&#x59CB;&#x5316;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isShowDecoderSoLog()</code>&#x8FD4;&#x56DE;decode so&#x65E5;&#x5FD7;&#x662F;&#x5426;&#x5C55;&#x793A;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isShowTurenLog()</code>&#x67E5;&#x770B;Turen Log&#x7684;&#x5C55;&#x793A;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isTestWays()</code>&#x83B7;&#x53D6;&#x662F;&#x5426;&#x5F00;&#x542F;&#x6D4B;&#x8BD5;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseMacArray()</code>&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x4F7F;&#x7528;mic_array&#x65B9;&#x5F0F;&#x83B7;&#x53D6;PCM&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseNlp()</code>&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x8F93;&#x51FA;NLP&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseNlpConsumer()</code>&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x4F7F;&#x7528;NLP&#x4E91;&#x7AEF;&#x3001;&#x672C;&#x5730;&#x6280;&#x80FD;&#x8BED;&#x97F3;&#x5904;&#x7406;&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseOtherAudio()</code>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;audio&#x6570;&#x636E;&#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUsePcm()</code>&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x8F93;&#x51FA;PCM&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseTurenProc()</code>&#x67E5;&#x8BE2;&#x662F;&#x5426;turenproc&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x542F;&#x52A8;Turen&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setAssetsConfigPath(java.lang.String path)</code>&#x8BBE;&#x7F6E;Assets&#x76EE;&#x5F55;&#x4E2D;&#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setCertificate(java.lang.String secretKey)</code>&#x8BBE;&#x7F6E;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x5BC6;&#x5319;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setConfigFileName(java.lang.String fileName)</code>&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x5316;turen&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setDeviceId(java.lang.String mDeviceId)</code>&#x8BBE;&#x7F6E;&#x8BBE;&#x5907;&#x7684;DeviceId&#xFF0C; sn&#x53F7;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setDeviceTypeId(java.lang.String mDeviceTypeId)</code>&#x8BBE;&#x7F6E;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Type ID</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setIgnoreMoveConfig(boolean ignoreMoveConfig)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5FFD;&#x7565;Turen&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#xFF0C;&#x7528;&#x4E8E;turen&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x6D4B;&#x8BD5;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setIgnoreSuppressAudioVolume(boolean ignoreSuppressAudioVolume)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5FFD;&#x7565;&#x58F0;&#x97F3;&#x538B;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;BSP&#x6A21;&#x5757;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setKey(java.lang.String key)</code>&#x8BBE;&#x7F6E;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;KEY</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setLogConfig(int logLevel, boolean showTurenLog, boolean showDecoderSoLog)</code>&#x8BBE;&#x7F6E;log&#x7B49;&#x7EA7;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setMustInit(boolean mustInit)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5F3A;&#x5236;&#x521D;&#x59CB;&#x5316;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setRealConfigPath(java.lang.String path)</code>&#x8BBE;&#x7F6E;&#x7B97;&#x6CD5;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x771F;&#x5B9E;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setSecret(java.lang.String secret)</code>&#x8BBE;&#x7F6E;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x65F6;&#x751F;&#x6210;&#x7684;Secret</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setShowDecoderSoLog(boolean show)</code>&#x8BBE;&#x7F6E;decode so&#x65E5;&#x5FD7;&#x662F;&#x5426;&#x5C55;&#x793A;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setShowTurenLog(boolean show)</code>&#x8BBE;&#x7F6E;Turen Log&#x7684;&#x5C55;&#x793A;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setTestWays(boolean testWays)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5F00;&#x542F;&#x6D4B;&#x8BD5;&#x6A21;&#x5F0F;&#xFF0C;&#x8BC6;&#x522B;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x6709;&#x533A;&#x522B;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setUseMacArray(boolean useMacArray)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x4F7F;&#x7528;mic_array&#x65B9;&#x5F0F;&#x83B7;&#x53D6;PCM&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setUseNlp(boolean useNlp)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x8F93;&#x51FA;NLP&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setUseNlpConsumer(boolean useNlpConsumer)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x4F7F;&#x7528;NLP&#x4E91;&#x7AEF;&#x3001;&#x672C;&#x5730;&#x6280;&#x80FD;&#x8BED;&#x97F3;&#x5904;&#x7406;&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setUseOtherAudio(boolean useOtherAudio)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x81EA;&#x5DF1;&#x7684;audio&#x6570;&#x636E;&#x6A21;&#x5757;&#xFF08;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;SDK&#x7684;BSP Audio&#x6570;&#x636E;&#x6A21;&#x5757;&#xFF09;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setUsePcm(boolean usePcm)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x8F93;&#x51FA;PCM&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td><code>ServerConfig</code></td>
+<td><code>setUseTurenProc(boolean useTurenProc)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;turenproc&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x542F;&#x52A8;Turen&#x65B9;&#x5F0F;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>IProxyListener.java &#x7B97;&#x6CD5;&#x4E2D;&#x5FC3;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD4;&#x56DE;&#x503C;</th>
+<th>&#x65B9;&#x6CD5;&#x548C;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><code>onRealAsrBegin()</code>&#x771F;&#x6B63;&#x7B97;&#x6CD5;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>onRealAsrEnd()</code>&#x771F;&#x6B63;&#x7B97;&#x6CD5;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>onStartAfeServer()</code>&#x670D;&#x52A1;&#x5EFA;&#x7ACB;&#x5E76;&#x542F;&#x52A8;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>VoiceRecognize.Event  enum &#x7C7B;&#x578B;&#x8BF4;&#x660E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BED;&#x97F3;&#x5524;&#x9192;&#x4E8B;&#x4EF6;&#x679A;&#x4E3E;&#x5B9A;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EVENT_VOICE_COMING</code></td>
+<td>&#x6FC0;&#x6D3B;&#x5373;&#x5C06;&#x5F00;&#x59CB;&#xFF08;sl &#x5B58;&#x5728;&#x503C;&#xFF0C;energy&#x503C;&#x4E3A;0&#xFF09;</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_LOCAL_WAKE</code></td>
+<td>&#x672C;&#x5730;&#x5DF2;&#x7ECF;&#x6FC0;&#x6D3B;&#xFF08;sl &#x5B58;&#x5728;&#x503C;&#xFF0C;energy&#x503C;&#x4E3A;0&#xFF09;</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_START</code></td>
+<td>&#x5F00;&#x59CB;&#x4E0A;&#x4F20;VAD&#xFF08;sl &#x503C;&#x4E3A;0&#xFF0C;energy&#x5B58;&#x5728;&#x503C; &#xFF09;</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_NONE</code></td>
+<td>&#x4E8C;&#x6B21;&#x786E;&#x8BA4;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;&#xFF0C;&#x53EA;&#x51FA;&#x4E8E;&#x5DF2;&#x7ECF;&#x5728;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x76F4;&#x63A5;&#x8BF4;&#x8BED;&#x97F3;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_ACCEPT</code></td>
+<td>&#x4E91;&#x7AEF;&#x4E8C;&#x6B21;&#x786E;&#x8BA4;&#x901A;&#x8FC7;</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_REJECT</code></td>
+<td>&#x4E91;&#x7AEF;&#x4E8C;&#x6B21;&#x786E;&#x8BA4;&#x4E0D;&#x901A;&#x8FC7;</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_CANCEL</code></td>
+<td>&#x53D6;&#x6D88;&#x5F53;&#x524D;&#x4E0A;&#x4F20;VAD</td>
+</tr>
+<tr>
+<td><code>EVENT_VOICE_LOCAL_SLEEP</code></td>
+<td>&#x901A;&#x8FC7;&#x4F11;&#x7720;&#x8BCD;&#x4ECE;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;&#x8FDB;&#x5165;&#x4F11;&#x7720;&#x72B6;&#x6001;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>RecordClientManager &#x5F55;&#x97F3;Pcm&#x7684;Client Socket</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseQueue()</code>&#x67E5;&#x770B;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x53D1;&#x9001;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>onDestroy()</code></td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>sendRecordData(byte[] data)</code>&#x53D1;&#x9001;&#x5F55;&#x97F3;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>setUseQueue(boolean useQueue)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x53D1;&#x9001;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>startSocket(java.lang.String ip, int port, ClientSocketManager.IConnnectListener listener)</code> &#x542F;&#x52A8;&#x4E00;&#x4E2A;socket&#x957F;&#x8FDE;&#x63A5;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>IRecordPcmReceiver &#x5F55;&#x97F3;pcm&#x6570;&#x636E;&#x83B7;&#x53D6;&#x540E;&#x5904;&#x7406;&#x76D1;&#x542C;&#x56DE;&#x8C03;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><code>onPcmReceive(int length, byte[] data)</code>&#x5F55;&#x97F3;pcm&#x6570;&#x636E;&#x83B7;&#x53D6;&#x540E;&#x5904;&#x7406;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ClientSocketManager.IConnnectListener Socket&#x8FDE;&#x63A5;&#x76D1;&#x542C;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><code>onConnectFailed(ClientSocketManager socketManager)</code>&#x8FDE;&#x63A5;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>onConnectSuccess(ClientSocketManager socketManager)</code>&#x8FDE;&#x63A5;&#x6210;&#x529F;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>PcmClientManager &#x5F55;&#x97F3;Pcm&#x7684;Client Socket</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean</code></td>
+<td><code>isUseQueue()</code>&#x67E5;&#x770B;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x53D1;&#x9001;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>onDestroy()</code></td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>sendRecordData(byte[] data)</code>&#x53D1;&#x9001;&#x5F55;&#x97F3;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>setUseQueue(boolean useQueue)</code>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x53D1;&#x9001;</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><code>startSocket(ClientSocketManager.IConnnectListener listener, IReceiverPcmListener pcmReceiver)</code> &#x542F;&#x52A8;&#x4E00;&#x4E2A;socket&#x957F;&#x8FDE;&#x63A5;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>IReceiverPcmListener &#x7B97;&#x6CD5;pcm&#x6570;&#x636E;&#x83B7;&#x53D6;&#x540E;&#x5904;&#x7406;&#x76D1;&#x542C;&#x56DE;&#x8C03;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><code>onPcmReceive(int length, byte[] data)</code>&#x7B97;&#x6CD5;pcm&#x6570;&#x636E;&#x83B7;&#x53D6;&#x540E;&#x5904;&#x7406;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x9519;&#x8BEF;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x6570;&#x91CF;&#x8FC7;&#x591A;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#x4E0D;&#x8DB3;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x5FD9;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>7</td>
+<td>&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x8D85;&#x65F6;</td>
+</tr>
+<tr>
+<td>101</td>
+<td>&#x65E0;&#x6CD5;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;</td>
+</tr>
+<tr>
+<td>103</td>
+<td>&#x8BED;&#x97F3;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x8D85;&#x65F6;&#x672A;&#x54CD;&#x5E94;</td>
+</tr>
+<tr>
+<td>104</td>
+<td>&#x672A;&#x77E5;&#x9519;&#x8BEF;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4E94;&#x3001;&#x5176;&#x4ED6;&#x8BF4;&#x660E;">&#x4E94;&#x3001;&#x5176;&#x4ED6;&#x8BF4;&#x660E;</h3>
+<p>SDK &#x7248;&#x672C;&#xFF1A;&#xFF08;aar&#xFF09;
+    1.2.7 
+    rokid_ai_sdk_release_1.2.7.aar
+    rokid_nlp_consumer_release_1.0.aar</p>
+<ol>
+<li>&#x9879;&#x76EE;git&#x5730;&#x5740;&#xFF1A;<a href="https://gitlab.rokid-inc.com/system_software/RokidAiSdk" target="_blank">https://gitlab.rokid-inc.com/system_software/RokidAiSdk</a></li>
+<li>&#x9879;&#x76EE;&#x4EA7;&#x7269;&#x5730;&#x5740;&#xFF1A;<a href="https://gitlab.rokid-inc.com/system_software/RokidAudioAiProduct" target="_blank">https://gitlab.rokid-inc.com/system_software/RokidAudioAiProduct</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../fullLink/fulllink.html" class="navigation navigation-prev " aria-label="Previous page: Android 系统级别全链路通用方案">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../tutorials/example3/intro.html" class="navigation navigation-next " aria-label="Next page: Android 无需激活的语音识别集成">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Android APK级别aar类型全链路方案","level":"1.5.2","depth":2,"next":{"title":"Android 无需激活的语音识别集成","level":"1.5.3","depth":2,"path":"tutorials/example3/intro.md","ref":"tutorials/example3/intro.md","articles":[{"title":"概述","level":"1.5.3.1","depth":3,"path":"speechTTS/introduce.md","ref":"speechTTS/introduce.md","articles":[]},{"title":"SDK目录结构","level":"1.5.3.2","depth":3,"path":"speechTTS/sdk_dir.md","ref":"speechTTS/sdk_dir.md","articles":[]},{"title":"集成","level":"1.5.3.3","depth":3,"path":"speechTTS/init.md","ref":"speechTTS/init.md","articles":[{"title":"集成前准备","level":"1.5.3.3.1","depth":4,"path":"speechTTS/init_prepare.md","ref":"speechTTS/init_prepare.md","articles":[]},{"title":"语音识别Speech集成","level":"1.5.3.3.2","depth":4,"path":"speechTTS/init_speech.md","ref":"speechTTS/init_speech.md","articles":[]},{"title":"语音合成TTS集成","level":"1.5.3.3.3","depth":4,"path":"speechTTS/init_tts.md","ref":"speechTTS/init_tts.md","articles":[]}]},{"title":"API调用说明","level":"1.5.3.4","depth":3,"ref":"","articles":[{"title":"语音识别Speech","level":"1.5.3.4.1","depth":4,"path":"speechTTS/api_speech.md","ref":"speechTTS/api_speech.md","articles":[]},{"title":"语音合成TTS","level":"1.5.3.4.2","depth":4,"path":"speechTTS/api_tts.md","ref":"speechTTS/api_tts.md","articles":[]}]},{"title":"示例DEMO","level":"1.5.3.5","depth":3,"url":"https://github.com/Rokid/RokidSpeechTTSDemo","ref":"https://github.com/Rokid/RokidSpeechTTSDemo","articles":[]}]},"previous":{"title":"Android 系统级别全链路通用方案","level":"1.5.1","depth":2,"path":"AudioAiSdk/fullLink/fulllink.md","ref":"AudioAiSdk/fullLink/fulllink.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"AudioAiSdk/RokidAiSdk/RokidAiSdk.md","mtime":"2018-09-19T13:11:26.627Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-19T13:12:35.949Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
